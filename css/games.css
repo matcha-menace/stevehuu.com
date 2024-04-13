@@ -122,6 +122,7 @@ video {
   border-radius: 8px 8px 0px 0px;
   margin-top: 0px !important;
   padding: 0px !important;
+  object-fit: cover;
 }
 .game-tab img.front {
   position: absolute;

@@ -24,6 +24,23 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "VCR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("VCR"), url("/fonts/VCR.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Disket Mono";
+  font-style: normal;
+  font-weight: normal;
+  src: local("DisketMono"),
+    url("/fonts/Disket-Mono-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
 html {
   overflow-y: scroll;
 }
