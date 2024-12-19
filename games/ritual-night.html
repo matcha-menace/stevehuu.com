@@ -37,34 +37,9 @@
     </script>
 
     <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div id="game-info-card">
-        <h1 id="ritual-e-h1" class="game-h1">Ritual Night</h1>
-        <h2>2024</h2>
-        <h4>Unity 2D</h4>
-        <h5>Outfox Games</h5>
-        <h5><u>role</u>: i made all the monster noises, that came out of me</h5>
-        <div class="_page-buttons"></div>
-        <br /><br />
-        <h5>
-          Ritual Night is a multi-player social-deduction party game with
-          <em>roguelite</em> elements.<br /><br />The players play as a group of
-          thrill-seeking monsters trying to summon the mighty Cthulhu. But watch
-          out! There are humans in disguise among you...
-        </h5>
-      </div>
-
+      <div class="_game-info"></div>
       <div id="game-content">
-        <p>Yes, this is <em>the</em> Ritual Night</p>
-        <div class="row">
-          <div class="col-12">
-            <img
-              src="/images/games/ritual_night/sac.gif"
-              class="d-block w-100 img-fluid"
-              style="border-radius: 12px"
-            />
-            <p style="text-align: end">*pre-alpha footage</p>
-          </div>
-
+        <div class="row d-none">
           <div class="col-12">
             <div
               class="row"
@@ -74,23 +49,6 @@
                 margin: -1px;
               "
             >
-              <div class="col-6 col-sm-4">
-                <a href="https://outfoxgames.net" target="_blank">
-                  <img
-                    src="/images/games/ritual_night/outfox_logo.png"
-                    style="width: 100%"
-                /></a>
-              </div>
-              <div class="col-6 col-sm-4">
-                <a
-                  href="https://store.steampowered.com/app/1834980/Ritual_Night/"
-                  target="_blank"
-                >
-                  <img
-                    src="/images/games/ritual_night/steam_logo.png"
-                    style="width: 100%"
-                /></a>
-              </div>
               <div class="col-6 col-sm-4">
                 <a href="https://discord.gg/pdGkdJEkHR" target="_blank">
                   <img
@@ -123,26 +81,26 @@
             </div>
           </div>
         </div>
-
-        <!-- <hr />
-        <h3>Design breakdown</h3>
-        <p>
-          Yes yes will eventually write it. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p> -->
       </div>
     </main>
 
     <div class="_footer"></div>
 
     <script>
-      GamePageSetup("../games/untitled-crt-game.html", "../games/foghorn.html");
+      GameInfoSetup(
+        "Ritual Night",
+        "2021 - 2024",
+        "Unity 2D",
+        "Outfox Games",
+        "Full-time",
+        "Summon Cthulhu in this social deduction game with no early eliminations! Monsters work together to complete the ritual, while stealthy humans secretly sabotage and cause chaos.",
+        true,
+        "https://store.steampowered.com/app/1834980/Ritual_Night/",
+        0,
+        "../games/anamnesis.html",
+        "../games/thought-experiment-simulator.html",
+        "#48bf84"
+      );
     </script>
   </body>
 </html>

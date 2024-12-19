@@ -17,12 +17,18 @@ $(() => {
       $("#index-ad").fadeIn(300);
     }
   };
+  LoadSvgs()
 });
+
+function LoadSvgs() {
+  $("._svg-steam").load("/master_htmls/svg/svg-steam.html");
+  $("._svg-itch").load("/master_htmls/svg/svg-itch.html");
+  $("._svg-new-window").load("/master_htmls/svg/svg-new-window.html");
+}
 
 function PageSetup(showSocial, currentPageNavLink, isCat) {
   $("._header").load("/master_htmls/header.html", function () {
     $(currentPageNavLink).attr("class", showSocial ? "nav-game current-page" : "nav-link current-page");
-    $("header .ad").css({ 'display': showSocial ? 'block' : 'none' })
     $("#header-social").addClass(showSocial ? "" : "d-md-none");
     $("#header-cat").addClass(isCat ? "" : "d-none");
     $("#header-stuff").addClass(isCat ? "d-none" : "");
@@ -40,6 +46,26 @@ function PageSetup(showSocial, currentPageNavLink, isCat) {
     })
   });
 };
+
+function GameInfoSetup(gameTitle, gameTime, gameEngine, gameContext, gameRole, gameDescription,
+  hasGamePlayButton, gamePlayButtonLink, gamePlayButtonIcon, leftLink, rightLink,
+  uniqueColor
+) {
+  $("._game-info").load("/master_htmls/game-info-card.html", function () {
+    $('.game-h1').html(gameTitle);
+    $('.game-time').html(gameTime);
+    $('.game-engine').html(gameEngine);
+    $('.game-context').html(gameContext);
+    $('.game-role').html(gameRole);
+    $('.game-description').html(gameDescription);
+    $('.game-play-button-div').removeClass(hasGamePlayButton ? "d-none" : '');
+    $('.game-play-link').attr('href', gamePlayButtonLink);
+    $('.game-play-icon').addClass(gamePlayButtonIcon == 0 ? '_svg-steam' : '_svg-itch');
+    $('.game-description').attr('style', `text-shadow: 5px 2px 10px ${uniqueColor}`)
+    GamePageSetup(leftLink, rightLink)
+    LoadSvgs()
+  })
+}
 
 function GamePageSetup(left, right) {
   $("._page-buttons").load("/master_htmls/page-buttons.html", function () {
@@ -74,9 +100,10 @@ function LoadGameTabs() {
 var adViewed = false;
 function CloseAd() {
   var onMobile = window.matchMedia("(max-width: 1319px)").matches;
-  if (onMobile) {
-    adViewed = true;
-  }
+  // if (onMobile) {
+  //   adViewed = true;
+  // }
+  adViewed = true;
   $("#index-ad").fadeOut(100);
 }
 

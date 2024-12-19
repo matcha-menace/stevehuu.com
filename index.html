@@ -88,7 +88,7 @@
               </svg>
             </span>
           </h1>
-          <h2 style="font-size: 28px">makes games</h2>
+          <h2 style="font-size: 28px">game designer</h2>
 
           <!-- social bar -->
           <div class="social-bar">
@@ -127,9 +127,7 @@
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://www.instagram.com/stevey.huu/"
-                    target="_blank"
+                  <a href="https://www.instagram.com/eveth.uu/" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -234,34 +232,13 @@
                       d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
                     />
                   </svg>
-                  pittsburrr
+                  pitt / nyc
                 </p>
                 <p>
-                  co-founder of
+                  co-founded
                   <a target="_blank" href="https://www.outfoxgames.net"
-                    >Outfox Games
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
-                      fill="var(--color-w)"
-                      class="bi bi-box-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 
-                        4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5
-                        0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 
-                        0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 
-                        9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                      />
-                    </svg>
-                  </a>
+                    >Outfox Games </a
+                  ><span class="_svg-new-window"></span>
                   <br />
                   email &#60;<a
                     href="mailto:steve.huu21@gmail.com"
@@ -282,10 +259,7 @@
 
           <!-- Game -->
           <div id="index-game">
-            <div
-              id="games-main"
-              class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3 g-lg-4"
-            >
+            <div class="index-game-section">
               <div id="first-game-box">
                 <div class="p-2">
                   <script>
@@ -299,28 +273,127 @@
                   </h1>
                 </div>
               </div>
+            </div>
+
+            <!-- Shipped -->
+            <h2 class="game-category-title">Shipped</h2>
+            <hr class="rounded" />
+            <div
+              id="games-shipped"
+              class="games-main row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3 g-lg-4"
+            >
               <div class="p-2 game-tab">
                 <a
-                  href="https://www.instagram.com/stuffed.machine/"
-                  title="Under development"
+                  href="../games/ritual-night.html"
+                  title="Sus"
                   data-bs-toggle="tooltip"
                   data-bs-custom-class="unfinished-tooltip"
                   data-bs-placement="top"
-                  target="_blank"
+                >
+                  <div>
+                    <img
+                      alt="ritual night"
+                      src="../images/games/ritual_night_splash.jpg"
+                    />
+                    <video
+                      width="100%"
+                      autoplay
+                      muted
+                      loop
+                      class="behind-splash"
+                    >
+                      <source src="../videos/rn_trailer.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <h2>
+                      Ritual Night
+                      <span class="_svg-steam"></span>
+                    </h2>
+                  </div>
+                </a>
+              </div>
+              <div class="p-2 game-tab">
+                <a
+                  href="../games/thought-experiment-simulator.html"
+                  title="It's that fucking trolley again"
+                  data-bs-toggle="tooltip"
+                  data-bs-custom-class="unfinished-tooltip"
+                  data-bs-placement="top"
+                >
+                  <div>
+                    <img
+                      alt="thought experiment simulator"
+                      src="../images/games/tes_splash.jpg"
+                    />
+                    <video
+                      width="100%"
+                      autoplay
+                      muted
+                      loop
+                      class="behind-splash"
+                    >
+                      <source
+                        src="../videos/tes_trailer.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                    <h2>
+                      Thought Experiment Simulator
+                      <span class="_svg-steam"></span>
+                    </h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Working -->
+            <br />
+            <h2 class="game-category-title">Working</h2>
+            <hr class="rounded" />
+            <div
+              id="games-working"
+              class="games-main row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3 g-lg-4"
+            >
+              <!-- <div class="p-2 game-tab">
+                <a
+                  href="/"
+                  title="Concept Phase"
+                  data-bs-toggle="tooltip"
+                  data-bs-custom-class="unfinished-tooltip"
+                  data-bs-placement="top"
+                  onclick="return false"
                 >
                   <div>
                     <img
                       alt="hyperstars_splash"
                       src="../images/games/luna/luna_splash.png"
                     />
-                    <h2 style="font-family: 'Disket Mono'">ЛУНА</h2>
+                    <h2>?</h2>
+                  </div>
+                </a>
+              </div> -->
+              <div class="p-2 game-tab">
+                <a
+                  href="../games/brainrot.html"
+                  title="Baking"
+                  data-bs-toggle="tooltip"
+                  data-bs-custom-class="unfinished-tooltip"
+                  data-bs-placement="top"
+                >
+                  <div>
+                    <img
+                      alt="hyperstars_splash"
+                      src="../images/games/brainrot_splash.jpg"
+                    />
+                    <h2>Brainrot*</h2>
                   </div>
                 </a>
               </div>
               <div class="p-2 game-tab">
                 <a
                   href="https://x.com/HyperStarsDev"
-                  title="Under development"
+                  title="Cooking"
                   data-bs-toggle="tooltip"
                   data-bs-custom-class="unfinished-tooltip"
                   data-bs-placement="top"
@@ -331,15 +404,36 @@
                       alt="hyperstars_splash"
                       src="../images/games/hyper_splash.webp"
                     />
-                    <img
-                      class="front"
-                      alt="hyperstars_splash gif"
-                      src="../images/games/hyperstars/hyperstars_0305.gif"
-                    />
-                    <h2>HyperStars</h2>
+                    <video
+                      width="100%"
+                      autoplay
+                      muted
+                      loop
+                      class="behind-splash"
+                    >
+                      <source
+                        src="../videos/hyper_trailer.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                    <h2>
+                      HyperStars
+                      <span class="_svg-new-window"></span>
+                    </h2>
                   </div>
                 </a>
               </div>
+            </div>
+
+            <!-- School -->
+            <br />
+            <h2 class="game-category-title">School</h2>
+            <hr class="rounded" />
+            <div
+              id="games-school"
+              class="games-main row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3 g-lg-4"
+            >
               <div class="p-2 game-tab">
                 <a href="../games/untitled-crt-game.html">
                   <div>
@@ -351,41 +445,7 @@
                   </div>
                 </a>
               </div>
-              <div class="p-2 game-tab on-steam">
-                <a
-                  href="../games/ritual-night.html"
-                  title="Under development"
-                  data-bs-toggle="tooltip"
-                  data-bs-custom-class="unfinished-tooltip"
-                  data-bs-placement="top"
-                >
-                  <div>
-                    <img
-                      alt="ritual night"
-                      src="../images/games/ritual_night_splash.webp"
-                    />
-                    <h2>
-                      Ritual Night
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        fill="currentColor"
-                        class="bi bi-steam"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.217 2.217 0 0 1-1.312-1.568L.33 10.333Z"
-                        />
-                        <path
-                          d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.705 1.705 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027Zm2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048Z"
-                        />
-                      </svg>
-                    </h2>
-                  </div>
-                </a>
-              </div>
-              <div class="p-2 game-tab playable">
+              <div class="p-2 game-tab">
                 <a href="../games/foghorn.html">
                   <div>
                     <img
@@ -394,22 +454,11 @@
                     />
                     <h2>
                       Foghorn
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="23.906"
-                        height="20"
-                        fill="#f8f2e2"
-                        class="bi bi-itch"
-                        viewBox="0 0 245.37069 220.73612"
-                      >
-                        <path
-                          d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"
-                        />
-                      </svg>
+                      <span class="_svg-itch"></span>
                     </h2></div
                 ></a>
               </div>
-              <div class="p-2 game-tab playable">
+              <div class="p-2 game-tab">
                 <a href="../games/live-from-the-cube.html">
                   <div>
                     <img
@@ -418,22 +467,11 @@
                     />
                     <h2>
                       Live from the Cube
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="23.906"
-                        height="20"
-                        fill="#f8f2e2"
-                        class="bi bi-itch"
-                        viewBox="0 0 245.37069 220.73612"
-                      >
-                        <path
-                          d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"
-                        />
-                      </svg>
+                      <span class="_svg-itch"></span>
                     </h2></div
                 ></a>
               </div>
-              <div class="p-2 game-tab playable">
+              <div class="p-2 game-tab">
                 <a href="../games/pyramids.html">
                   <div>
                     <img
@@ -442,22 +480,24 @@
                     />
                     <h2>
                       PYRAMIDS
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="23.906"
-                        height="20"
-                        fill="#f8f2e2"
-                        class="bi bi-itch"
-                        viewBox="0 0 245.37069 220.73612"
-                      >
-                        <path
-                          d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"
-                        />
-                      </svg>
+                      <span class="_svg-itch"></span>
                     </h2></div
                 ></a>
               </div>
               <div class="p-2 game-tab">
+                <a href="../games/anamnesis.html">
+                  <div>
+                    <img
+                      alt="pyramids_splash"
+                      src="../images/games/anamnesis_splash.webp"
+                    />
+                    <h2>
+                      ANAMNESIS
+                      <span class="_svg-itch"></span>
+                    </h2></div
+                ></a>
+              </div>
+              <!-- <div class="p-2 game-tab">
                 <a href="../games/project-starlight.html">
                   <div>
                     <img
@@ -467,37 +507,18 @@
                     <h2>Project Starlight</h2>
                   </div></a
                 >
-              </div>
-              <!-- <div class="p-2 game-tab on-itch">
+              </div> -->
+              <div class="p-2 game-tab">
                 <a href="https://masterhuhu.itch.io/" target="_blank">
-              <div>
-                <img src="../images/games/old_splash.png" />
-                <h2>
-                  itch.io Games
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="#f8f2e2"
-                    class="bi bi-box-arrow-up-right"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 
-                        4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5
-                        0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 
-                        0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 
-                        9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                    />
-                  </svg>
-                </h2>
+                  <div>
+                    <img src="../images/games/old_splash.png" />
+                    <h2>
+                      itch.io Games
+                      <span class="_svg-new-window"></span>
+                    </h2>
+                  </div>
+                </a>
               </div>
-            </a></div> -->
             </div>
           </div>
         </div>
@@ -564,22 +585,19 @@
         "
       />
       <a
-        id="outfoxlink"
-        href="https://www.outfoxgames.net/"
+        id="ad-link"
+        href="https://store.steampowered.com/app/1834980/Ritual_Night/"
         target="_blank"
         style="font-family: 'JetBrains Mono'"
         >FIND OUT MORE</a
       >
       <p id="outfoxtext" class="fun-p">
-        You are invited to an exclusive monsters-only party to complete a ritual
-        to summon <inline id="outfoxtext-highlight">Cthulhu</inline>. Cooperate
-        with each other to gather the needed ingredients and cast your magic
-        spells to deduce the icky humans that have snuck in to crash the party
-        and sabotage the ritual. Disguising as
-        <inline id="outfoxtext-highlight">NPC</inline>s and casting magic
-        spells, the humans cause chaos and sow doubt. Each day, the game evolves
-        with both sides gaining abilities and tools to deduce or deceive each
-        other as <inline id="outfoxtext-highlight">Cthulhu</inline> watches!
+        You are invited!<br /><br />
+        Summon <inline id="outfoxtext-highlight">Cthulhu</inline> in this social
+        deduction game with
+        <inline id="outfoxtext-highlight">no early eliminations</inline>!
+        Monsters work together to complete the ritual, while stealthy humans
+        secretly sabotage and cause chaos.
       </p>
     </div>
 

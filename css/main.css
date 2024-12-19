@@ -279,7 +279,7 @@ button {
 .ad-close:hover svg {
   fill: #ad2144;
 }
-.ad a#outfoxlink {
+.ad a#ad-link {
   color: #d12a54;
   font-size: larger;
   border: dotted 2px rgb(0, 255, 0);
@@ -288,7 +288,7 @@ button {
   position: relative;
   top: -20px;
 }
-.ad a#outfoxlink:hover {
+.ad a#ad-link:hover {
   background-color: #333e45;
   border-color: #333e45;
   color: #fbaf40;

@@ -37,46 +37,7 @@
     </script>
 
     <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div id="game-info-card">
-        <h1 id="pyramids-h1" class="game-h1">PYRAMIDS</h1>
-        <h2 style="color: var(--color-y)">
-          Play:
-          <a
-            href="https://masterhuhu.itch.io/pyramids"
-            target="_blank"
-            class="game-play-link"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-windows"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M6.555 1.375 0 2.237v5.45h6.555V1.375zM0 13.795l6.555.933V8.313H0v5.482zm7.278-5.4.026 6.378L16 16V8.395H7.278zM16 0 7.33 1.244v6.414H16V0z"
-              />
-            </svg>
-          </a>
-        </h2>
-        <h4>UE4</h4>
-        <h5>
-          NYU Game Center<br />
-          <inline style="font-size: smaller">(Fall 2021)</inline>
-        </h5>
-        <div class="_page-buttons"></div>
-        <br /><br />
-        <h5>
-          Pyramids is a third-person adventure
-          <em>prototype</em> set in a bizarre post-apocalypse world.<br /><br />
-          The protagonist finds themselves in a colorless world where they need
-          to find fragments of the past to piece together what the fuck
-          happened. The players will be able to fully explore the broken world
-          and find numerous narrative pieces that may or may not lead them
-          closer to the truth.
-        </h5>
-      </div>
-
+      <div class="_game-info"></div>
       <div id="game-content">
         <div class="row">
           <div class="col-12">
@@ -177,9 +138,19 @@
     <div class="_footer"></div>
 
     <script>
-      GamePageSetup(
+      GameInfoSetup(
+        "PYRAMIDS",
+        "2021",
+        "UE4",
+        "NYU Game Center<br /><inline style='font-size: smaller'>(Fall 2021)",
+        "",
+        "Pyramids is a third-person adventure <em>prototype</em> set in a bizarre post-apocalypse world.<br /><br /> The protagonist finds themselves in a colorless world where they need to find fragments of the past to piece together what the fuck happened. The players will be able to fully explore the broken world and find numerous narrative pieces that may or may not lead them closer to the truth.",
+        true,
+        "https://masterhuhu.itch.io/pyramids",
+        1,
         "../games/live-from-the-cube.html",
-        "../games/project-starlight.html"
+        "../games/anamnesis.html",
+        "#f9fb87"
       );
     </script>
   </body>

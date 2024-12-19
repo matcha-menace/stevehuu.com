@@ -18,6 +18,9 @@
 .game-tab a h2 {
   padding-left: 4px;
   margin-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 video {
@@ -108,12 +111,6 @@ video {
   --bs-tooltip-arrow-height: 10px;
   font-family: "JetBrains Mono";
 }
-.on-itch a:hover div {
-}
-.playable a:hover div {
-}
-.on-steam a:hover div {
-}
 
 .game-tab img {
   position: relative;
@@ -124,18 +121,23 @@ video {
   padding: 0px !important;
   object-fit: cover;
 }
-.game-tab img.front {
+.game-tab .behind-splash {
   position: absolute;
-  width: 100%;
-  height: auto;
-  transform: scaleY(0);
-  transition: transform 0.2s ease-out;
-  left: 0;
   top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: none;
+  border-radius: 8px 8px 0px 0px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.game-category-title {
+  text-align: end;
 }
 
-.unfinished:hover img.front {
-  transform: scaleY(1);
+.game-tab:hover .behind-splash {
+  opacity: 1;
 }
 
 .pyramids-html {
@@ -146,27 +148,6 @@ video {
 .game-h1 {
   color: var(--color-w);
   cursor: default;
-}
-#ritual-h1:hover {
-  text-shadow: 5px 2px 10px #48bf84;
-}
-#live-cube-h1:hover {
-  text-shadow: 5px 2px 10px #a845ff;
-}
-#pyramids-h1:hover {
-  text-shadow: 5px 2px 10px #f9fb87;
-}
-#titanpoint-h1:hover {
-  text-shadow: 5px 2px 10px #f9fb87;
-}
-#anamnesis-h1:hover {
-  text-shadow: 5px 2px 10px #ffffff;
-}
-#starlight-h1:hover {
-  text-shadow: 5px 2px 10px #ff27ed;
-}
-#project-e-h1:hover {
-  text-shadow: 5px 2px 10px #f9fb87;
 }
 
 /* page buttons */
@@ -193,8 +174,19 @@ video {
 .page-buttons.disabled {
   opacity: 0.3;
 }
+.game-play-link:hover svg {
+  fill: var(--color-b) !important;
+}
+.play-buttons {
+  text-align: center;
+}
 
 /* game info */
+@media screen and (max-width: 768px) {
+  #game-info-card {
+    width: 100% !important;
+  }
+}
 #game-info-card {
   width: 300px;
   height: fit-content;

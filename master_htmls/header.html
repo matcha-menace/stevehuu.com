@@ -1,6 +1,6 @@
 <header class="container-fluid d-flex justify-content-between">
   <!-- hamburger button -->
-  <div id="header-hamburger" class="col d-flex justify-content-start">
+  <div id="header-hamburger" class="col d-flex d-md-none justify-content-start">
     <button
       class="navbar-toggler"
       type="button"
@@ -133,7 +133,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
-            fill="currentColor"
+            fill="var(--color-w)"
             class="social-svg bi bi-spotify"
             viewBox="0 0 16 16"
           >
@@ -145,6 +145,7 @@
     </ul>
   </div>
 
+  <!-- mobile nav -->
   <nav class="navbar">
     <!-- offcanvas -->
     <div
@@ -163,24 +164,49 @@
             <ul id="games-nav">
               <li>
                 <a
+                  id="nav-link-ritual-night"
+                  class="nav-game"
+                  aria-current="page"
+                  href="/games/ritual-night.html"
+                  >Ritual Night</a
+                >
+              </li>
+              <!-- <li>
+                <a
                   id="nav-link-luna"
                   class="nav-game"
                   aria-current="page"
-                  href="https://www.instagram.com/stuffed.machine/"
-                  target="_blank"
+                  href=""
                   >ЛУНА</a
+                >
+              </li> -->
+              <li>
+                <a
+                  id="nav-link-tes"
+                  class="nav-game"
+                  aria-current="page"
+                  href="/games/thought-experiment-simulator.html"
+                  >T.E.S.</a
                 >
               </li>
               <li>
+                <a
+                  id="nav-link-brainrot"
+                  class="nav-game"
+                  aria-current="page"
+                  href="/games/brainrot.html"
+                  >Brainrot</a
+                >
+              </li>
+              <!-- <li>
                 <a
                   id="nav-link-hyperstars"
                   class="nav-game"
                   aria-current="page"
                   href="https://x.com/HyperStarsDev"
-                  target="_blank"
                   >HyperStars</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a
                   id="nav-link-project-e"
@@ -188,15 +214,6 @@
                   aria-current="page"
                   href="/games/untitled-crt-game.html"
                   >Untitled CRT Game</a
-                >
-              </li>
-              <li>
-                <a
-                  id="nav-link-ritual-night"
-                  class="nav-game"
-                  aria-current="page"
-                  href="/games/ritual-night.html"
-                  >Ritual Night</a
                 >
               </li>
               <li>
@@ -247,58 +264,6 @@
             >
           </li>
         </ul>
-        <div class="ad">
-          <script>
-            setInterval(() => {
-              $("#flash").fadeIn(200);
-              $("#flash").fadeOut(200);
-            }, 200);
-          </script>
-
-          <h4
-            id="flash"
-            style="
-              background-color: #8dc63f;
-              color: magenta;
-              width: 100%;
-              margin: 0;
-              text-align: center;
-              text-shadow: 2px 2px 15px #e9f1f7;
-              font-family: 'K2D Light Regular';
-            "
-          >
-            You might also want to check out:
-          </h4>
-          <img
-            src="/images/index/ad2.gif"
-            style="
-              width: 90%;
-              position: relative;
-              top: -30px;
-              margin: 0px;
-              margin-bottom: 15px;
-            "
-          />
-          <a
-            id="outfoxlink"
-            href="https://www.outfoxgames.net/"
-            target="_blank"
-            style="font-family: 'JetBrains Mono'"
-            >FIND OUT MORE</a
-          >
-          <p id="outfoxtext" class="fun-p">
-            You are invited to an exclusive monsters-only party to complete a
-            ritual to summon <inline id="outfoxtext-highlight">Cthulhu</inline>.
-            Cooperate with each other to gather the needed ingredients and cast
-            your magic spells to deduce the icky humans that have snuck in to
-            crash the party and sabotage the ritual. Disguising as
-            <inline id="outfoxtext-highlight">NPC</inline>s and casting magic
-            spells, the humans cause chaos and sow doubt. Each day, the game
-            evolves with both sides gaining abilities and tools to deduce or
-            deceive each other as
-            <inline id="outfoxtext-highlight">Cthulhu</inline> watches!
-          </p>
-        </div>
       </div>
     </div>
   </nav>
