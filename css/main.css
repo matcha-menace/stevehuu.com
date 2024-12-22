@@ -52,6 +52,7 @@ html {
 body {
   background-color: var(--color-b);
   color: var(--color-w);
+  height: 100vh;
 }
 
 header {

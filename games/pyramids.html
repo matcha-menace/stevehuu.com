@@ -30,16 +30,19 @@
     <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
     <div class="_header"></div>
     <script>
       PageSetup(true, "#nav-link-pyramids", true);
     </script>
 
-    <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div class="_game-info"></div>
-      <div id="game-content">
-        <div class="row">
+    <main class="container-md d-flex flex-wrap flex-md-nowrap flex-md-fill">
+      <div id="game-left">
+        <div class="_game-info"></div>
+      </div>
+
+      <div id="game-right">
+        <div id="game-content" class="row">
           <div class="col-12">
             <!-- begin carousel -->
             <div
@@ -76,7 +79,7 @@
                     muted
                     loop
                     src="/images/games/pyramids/screenshot3.mp4"
-                    style="width: 100%; margin-top: 10px"
+                    style="width: 100%"
                     class="w-100"
                   ></video>
                 </div>
@@ -86,7 +89,7 @@
                     muted
                     loop
                     src="/images/games/pyramids/screenshot1.mp4"
-                    style="width: 100%; margin-top: 10px"
+                    style="width: 100%"
                     class="w-100"
                   ></video>
                 </div>
@@ -96,7 +99,7 @@
                     muted
                     loop
                     src="/images/games/pyramids/screenshot2.mp4"
-                    style="width: 100%; margin-top: 10px"
+                    style="width: 100%"
                     class="w-100"
                   ></video>
                 </div>

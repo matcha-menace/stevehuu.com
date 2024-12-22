@@ -1,0 +1,67 @@
+<div>
+  <h3>Enemy Statemachine</h3>
+  <video
+    autoplay
+    muted
+    controls
+    loop
+    src="/images/games/project_e/statemachine_breakdown.mp4"
+    style="width: 100%"
+  ></video>
+  <p>
+    There is an enemy known as the <em>entity</em> that tracks and follows
+    player around as they explore. The brain of the enemy AI is driven by a
+    statemachine with the following states:
+  </p>
+  <ul>
+    <li><b>IDLE</b>: Enemy sits still.</li>
+    <li><b>CHASE</b>: Enemy actively chases after player.</li>
+    <li>
+      <b>TRACK</b>: When enemy just lost track of player, it tracks the player's
+      last known locations.
+    </li>
+    <li><b>PATROL</b>: Enemy roams the map at random.</li>
+  </ul>
+  <p>
+    Originally, I planned for two more states. However due to the scope of the
+    class <gray>and my ADHD</gray> they were not implemented.
+  </p>
+  <ul>
+    <li>
+      <b>INTERCEPT</b>: Enemy attempts to pathfind a shortcut to intercept the
+      player.
+    </li>
+    <li>
+      <b>NOISE TRACK</b>: Enemy tracks player using sound instead of line of
+      sight.
+    </li>
+  </ul>
+  <hr />
+  <div class="indent">
+    <h4>Tracking</h4>
+    <video
+      autoplay
+      muted
+      controls
+      loop
+      src="/images/games/project_e/101422.mp4"
+      style="width: 100%"
+    ></video>
+    <p>
+      When the player leaves the active detection (line of sight + detection
+      cone), the AI begins to
+      <r>note down player position based on a set interval</r>. The player
+      position gets pinged three times before tracking ends, and the enemy will
+      proceed to pathfind to the three points in sequence. If the player is not
+      found when reaching the end of track, the enemy goes back to patrol or
+      idle.
+    </p>
+    <hr />
+    <h4>Vision</h4>
+    <img style="width: 100%" src="/images/games/project_e/enemyvision.png" />
+    <p>
+      One more thing to mention is that the enemy operates on a vision cone that
+      has a set range. Player is only detected within this range.
+    </p>
+  </div>
+</div>

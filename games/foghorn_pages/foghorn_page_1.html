@@ -1,0 +1,102 @@
+<h3>A Game of Rays</h3>
+<video width="100%" controls muted style="margin-top: 10px">
+  <source src="/images/games/foghorn/foghorn_gif_4.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+<p>^ Full walkthrough.</p>
+<!-- begin carousel -->
+<div id="foghorn-carousel" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#foghorn-carousel"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#foghorn-carousel"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#foghorn-carousel"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="/images/games/foghorn/screenshot1.gif"
+        class="d-block w-100"
+        alt="foghorn moment showing enemy walking towards player"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="/images/games/foghorn/screenshot2.gif"
+        class="d-block w-100"
+        alt="foghorn enemy tracking player in front of the lighthouse"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="/images/games/foghorn/screenshot3.gif"
+        class="d-block w-100"
+        alt="foghorn player attempts to evade enemy behind trees"
+      />
+    </div>
+  </div>
+</div>
+<!-- end carousel -->
+<p>
+  The focus of this prototype is having an enemy AI that scans for the player.
+  To lose them, break line of sight with the enemy for a short period of time.
+</p>
+<p>
+  Foghorn plays with <em>raycasting</em>. Rays are used as line of sights for
+  both the player and the enemy. The game fails if the player stays in the
+  enemy's line of sight for too long. The core gameplay is about
+  <inline style="color: var(--color-r)"
+    >maintaining / breaking line of sight</inline
+  >.
+</p>
+<p>
+  To play into the theme of lighthouses and line of sights, the enemy has a
+  unique design for its face. Its face light changes based on its state. The
+  enemy has two states:
+  <strong>scanning</strong> & <strong>following</strong>.
+</p>
+<hr />
+<div class="indent">
+  <h4>Scanning (Yellow)</h4>
+  <video width="100%" controls muted style="margin-top: 10px">
+    <source src="/videos/fh_scanning.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <p>
+    While scanning, the enmey casts a ray from its eye-level. It will turn its
+    head back and forth in a scanning motion, until the either
+  </p>
+  <ul>
+    <li>the enemy's ray detects the player</li>
+    <li>the player's ray detects the enemy</li>
+  </ul>
+
+  <hr />
+  <h4>Stalking (White -> Red)</h4>
+  <video width="100%" controls muted style="margin-top: 10px">
+    <source src="/videos/fh_following.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <p>
+    While following, the enmey always focuses its ray on the player while
+    tracking the player's position. Its face light changes to white and slowly
+    lerps to red as it gets closer to the player.
+  </p>
+</div>

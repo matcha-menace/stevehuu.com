@@ -1,0 +1,155 @@
+<h3>Gameplay</h3>
+<p>This was one of the last solo projects I worked on at NYU.</p>
+<div>
+  <blockquote
+    class="twitter-tweet"
+    data-theme="dark"
+    style="margin-bottom: 300px !important"
+  >
+    <p lang="en" dir="ltr">
+      screenshots from this game i will never finish
+      <a
+        href="https://twitter.com/hashtag/indiegames?src=hash&amp;ref_src=twsrc%5Etfw"
+        >#indiegames</a
+      >
+      <a href="https://t.co/QnBgLzuERk">pic.twitter.com/QnBgLzuERk</a>
+    </p>
+    &mdash; evets huu (@master_huhu)
+    <a
+      href="https://twitter.com/master_huhu/status/1751811020698304637?ref_src=twsrc%5Etfw"
+      >January 29, 2024</a
+    >
+  </blockquote>
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</div>
+<p>
+  The core gameplay is to emulate the experience of “play” an VHS tape on an old
+  CRT. The player is lost in a monochrome maze while a scary monster chases you
+  down. The camera angles are stiff and awkward, to balance it out the players
+  get the power to control time itself. The game also features an AI powered
+  smart console that the players can consult with. An <em>entity</em> living in
+  CRT if you will.
+</p>
+<div class="row">
+  <div class="col-12 col-xl-6 d-flex flex-column">
+    <video
+      autoplay
+      muted
+      controls
+      loop
+      src="/images/games/project_e/old_gameplay.mp4"
+      style="width: 100%"
+    ></video>
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column">
+    <video
+      autoplay
+      muted
+      controls
+      loop
+      src="/images/games/project_e/pe_gameplay.mp4"
+      style="width: 100%"
+    ></video>
+  </div>
+</div>
+<p>
+  It has undergone two versions, one is the old yellow tone “<r>backrooms</r>”
+  inspired look which I worked on at school; another is the updated stylized
+  <r>monotone</r>
+  version which was added after the class.
+</p>
+
+<hr />
+<h3>Time Manipulation</h3>
+<p>
+  Got bored during the semester and I made some time manipulation mechanics
+  inspired by
+  <a href="https://www.youtube.com/watch?v=NFZrIAw1MzA" target="_blank">Jojo</a
+  >. It fits the theme of watching old VHS on a CRT. <r>PAUSE</r> (time stop) is
+  the most straightforward, but what if you can <r>REWIND</r> and
+  <r>FAST FROWARD</r> too?
+</p>
+<br />
+<div class="row indent">
+  <div
+    class="col-12 col-xl-6 d-flex flex-column justify-content-start"
+    style="border-right: 1px solid var(--color-g)"
+  >
+    <h4>Rewind</h4>
+    <video width="100%" controls muted>
+      <source
+        src="/images/games/project_e/rewind.mp4"
+        type="video/mp4"
+        alt="untitled crt game rewind"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <p>To achieve rewind, I am storing the following:</p>
+    <ul>
+      <li>player position</li>
+      <li>player camera direction</li>
+      <li>enemy position</li>
+      <li>enemy state</li>
+    </ul>
+    <p>
+      They are stored into a list each second. The list is
+      <r>expandable based on how many seconds are allowed</r> to be rewinded. I
+      had to limit the time units on the game to seconds since doing this
+      per-frame is inconsistent and extremely not performative.
+    </p>
+    <p>
+      There is a cooldown to pervent spamming and also to avoid bugs if player
+      time skips to <em>before</em> the game starts.
+    </p>
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-start">
+    <h4><s>Fast Forward</s> Skip</h4>
+    <video width="100%" controls muted>
+      <source
+        src="/images/games/project_e/timeskip.mp4"
+        type="video/mp4"
+        alt="untitled crt game skip time"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <p>^ <r>The skip happens at 00:06 in the video.</r></p>
+    <p>
+      Enemy now has a collider ball attached to the front of it. When that
+      collider ball gets detected by a player raycast, it triggers a time skip.
+      This creates the illusion when:
+    </p>
+    <div class="indent">
+      <p>
+        the enemy is about to enter player's view<br />-> skips time as if the
+        enemy appeared out of nowhere.
+      </p>
+    </div>
+    <p>
+      Coupled with changing the clock, it makes a pretty convincing the "<a
+        href="https://www.youtube.com/watch?v=DpCPlnUlSaI"
+        target="_blank"
+        >King Crimson</a
+      >" effect.
+    </p>
+    <p>
+      The player's momentum is perserved and basically flashes forward in
+      whichever direction they were going before.
+    </p>
+  </div>
+  <hr />
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-end">
+    <img
+      style="width: 100%"
+      src="/images/games/project_e/rewindskipsettings.png"
+    />
+    <p>Rewind & skip parameters are adjustable.</p>
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-end">
+    <img style="width: 100%" src="/images/games/project_e/enemyforecast.png" />
+    <p>Forecast collider which triggers the skip.</p>
+  </div>
+</div>

@@ -81,6 +81,24 @@ function GamePageSetup(left, right) {
   });
 };
 
+function GamePageTabs(htmlList) {
+  const gamePostButtons = $(".game-pages-nav-button").toArray();
+
+  $("#game-content").load(htmlList[0])
+  $(gamePostButtons[0]).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
+
+  $.each(gamePostButtons, function (i, btn) {
+    $(btn).click(function () {
+      $.each(gamePostButtons, function (i, btn) {
+        $(btn).removeClass("active-game-page").removeClass("flex-fill").removeClass("disabled")
+      })
+      $("#game-content").load(htmlList[i])
+      $(btn).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
+      $("html, body").animate({ scrollTop: 0 }, 100);
+    })
+  })
+}
+
 function LoadGameTabs() {
   const gameTabs = $(".game-tab").toArray();
   console.log(gameTabs)

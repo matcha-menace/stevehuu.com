@@ -1,0 +1,134 @@
+<h3>Console: Powered by ChaptGPT</h3>
+<img src="/images/games/project_e/console.jpg" style="width: 100%" />
+<p>
+  ^
+  <gray
+    >Sadly, this was the only picture of the ChatGPT console working as
+    subsequent updates to OpenAI's API have rendered this version un-usable in
+    2024.</gray
+  >
+</p>
+<p>
+  To re-create the 80s/90s retro computer feel, I added a console powered by
+  ChaptGPT.
+</p>
+<p>
+  This was achieved by using
+  <a href="https://gamecenter.nyu.edu/faculty/21776-2/" target="_blank"
+    >Eddy's</a
+  >
+  ChatGPT plugin that makes API calls to ChatGPT when provided with a token.
+  Pretty straightforward and kinda brutforce. For more info on Eddy's plugin
+  check out his game
+  <a
+    href="https://helixngc7293.itch.io/yandere-ai-girlfriend-simulator"
+    target="_blank"
+    >Yandere AI Girlfriend</a
+  >.
+</p>
+<hr />
+<div class="indent">
+  <h4>How it works</h4>
+  <p>
+    <s>Short answer is: black magic.</s> I made a custom scriptable that stores
+    pre-written prompts. These information includes:
+  </p>
+  <ul>
+    <li>How should the console behave (personality traits)</li>
+    <li>What languages to use</li>
+    <li>What are the <r>concepts</r>*</li>
+    <li>
+      Which concepts can / should the player know about
+      <b>at this stage</b>
+    </li>
+  </ul>
+  <p>
+    A <r>concept</r> is a game-rule / mechanic phrased in in-game terminology.
+    Concepts are stored in
+    <span style="text-decoration: underline">Databases</span> which are lists of
+    strings with a name-description pair. The description is used to prompt
+    ChatGPT to make sure it knows what the concepts are and what to say. The
+    idea is that: based on player progress, they will unlock more concepts so
+    that the console can tell them more lore / mechanics.
+  </p>
+  <div class="row">
+    <div class="col-12 col-xl-6 d-flex flex-column justify-content-between">
+      <img
+        style="width: 100%"
+        src="/images/games/project_e/consolesettings.png"
+      />
+      <p>console settings (initial prompt)</p>
+    </div>
+    <div class="col-12 col-xl-6 d-flex flex-column justify-content-between">
+      <img
+        style="width: 100%"
+        src="/images/games/project_e/consoledatabase.png"
+      />
+      <p>prompts database (unlockable lore)</p>
+    </div>
+  </div>
+  <hr />
+  <h4>Purpose?</h4>
+  <p>
+    <r
+      >In my opinion, the best usage for LLMs in games is to make it an
+      interactive in-game wiki.</r
+    >
+    If executed well it can revolutionize tutorialization and fragmented
+    storytelling. It should
+    <strong>serve as an addition on top of the core experience</strong> instead
+    of putting it front and center as the core experience itself. (<gray
+      >sorry Eddy</gray
+    >)
+  </p>
+  <p>BUT! I hope someone proves me wrong. AI games are fun.</p>
+  <p>
+    At least at the time when I made this, LLMs are simply too difficult to
+    control from a designer's standpoint. (<gray>maybe I'm just shit too</gray>)
+    It's impossible to predict how will it behave once its in players' hands.
+    That can become very annoying very quickly.<br />This is also why I opt for
+    the Console to only be an assistant, but not to directly affect gameplay.
+  </p>
+  <pre>
+🌕🌕🌕🌕🌕🌕🌕🌕🌕🌕🌕🌕
+🌕🌕🌕🌒🌕🌖🌒🌕🌕🌕🌕🌕
+🌕🌕🌖🌑🌓🌑🌑🌕🌕🌕🌕🌕
+🌕🌕🌗🌑🌑🌑🌑🌔🌕🌕🌕🌕
+🌕🌕🌘🌕🌑🌕🌑🌔🌖🌑🌕🌕
+🌕🌕🌖🌑🌑🌑🌑🌕🌕🌑🌔🌕
+🌕🌕🌕🌖🌑🌑🌔🌕🌕🌑🌔🌕
+🌕🌕🌕🌘🌑🌑🌒🌕🌕🌑🌔🌕
+🌕🌕🌕🌘🌑🌑🌑🌔🌖🌑🌕🌕
+🌕🌕🌕🌑🌑🌑🌑🌒🌑🌒🌕🌕
+🌕🌕🌕🌑🌑🌑🌑🌑🌒🌕🌕🌕</pre
+  >
+</div>
+<hr />
+<h3>Console Commands</h3>
+<video width="100%" controls muted>
+  <source
+    src="/images/games/project_e/pe_console_commands.mp4"
+    type="video/mp4"
+    alt="untitled crt game console commands"
+  />
+  Your browser does not support the video tag.
+</video>
+<div class="row">
+  <div class="col-12 col-xl-6 d-flex flex-column">
+    <img
+      style="width: 100%"
+      src="/images/games/project_e/consolecommands.png"
+    />
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column">
+    <p>It's a console. It has to have some commands in some capacity.</p>
+    <p>
+      Commands are created making use of <r>UnityEvents</r>. Each command should
+      be a scriptable object <gray>but I ran out of time to implement it</gray>.
+      However they are still easy to create as arrays each with their designated
+      enum. It's created this way so that I can easily utilize UnityEvents to
+      have a clean and visually clear structure to implement and review all the
+      functions that the command is calling.
+    </p>
+  </div>
+</div>

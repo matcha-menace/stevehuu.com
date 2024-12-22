@@ -30,20 +30,25 @@
     <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
     <div class="_header"></div>
     <script>
       PageSetup(true, "#nav-link-anamnesis", true);
     </script>
 
-    <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div class="_game-info"></div>
-      <div id="game-content">
-        <video width="100%" controls autoplay muted style="margin-top: 10px">
-          <source src="/videos/anamnesis.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="row">
+    <main class="container-md d-flex flex-wrap flex-md-nowrap flex-md-fill">
+      <div id="game-left">
+        <div class="_game-info"></div>
+      </div>
+
+      <div id="game-right">
+        <div id="game-content" class="row">
+          <div class="col-12 col-xxl-12">
+            <video width="100%" controls autoplay muted>
+              <source src="/videos/anamnesis.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <div class="col-12 col-xxl-12">
             <div class="row">
               <div class="col-6">

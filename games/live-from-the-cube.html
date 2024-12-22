@@ -30,24 +30,21 @@
     <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
     <div class="_header"></div>
     <script>
       PageSetup(true, "#nav-link-live-from-the-cube", true);
     </script>
 
-    <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div class="_game-info"></div>
-      <div id="game-content">
-        <div class="row">
+    <main class="container-md d-flex flex-wrap flex-md-nowrap flex-md-fill">
+      <div id="game-left">
+        <div class="_game-info"></div>
+      </div>
+
+      <div id="game-right">
+        <div id="game-content" class="row">
           <div class="col-12">
-            <video
-              width="100%"
-              controls
-              autoplay
-              muted
-              style="margin-top: 10px"
-            >
+            <video width="100%" controls autoplay muted>
               <source
                 src="/videos/live_cube.mp4"
                 type="video/mp4"
@@ -109,19 +106,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <hr />
-        <h3>Design breakdown</h3>
-        <p>
-          Yes yes will eventually write it. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p> -->
       </div>
     </main>
 

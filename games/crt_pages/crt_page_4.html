@@ -1,0 +1,62 @@
+<h3>Rendering Passes</h3>
+<img style="width: 100%" src="/images/games/project_e/flash.png" />
+<div class="row">
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-end">
+    <img style="width: 100%" src="/images/games/project_e/renderer.png" />
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-end">
+    <p>
+      I used URP's render features to make my own rendering tools. This is
+      <r>a custom render feature that allows me to stack blit pass materials</r>
+      to create my intended effect. With the help of clever placement of UI
+      elements I eventually ended up with this retro CRT look.
+    </p>
+  </div>
+</div>
+
+<hr />
+<div class="row">
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-start">
+    <img style="width: 100%" src="/images/games/project_e/render_1.png" />
+    <p>Base</p>
+    <img style="width: 100%" src="/images/games/project_e/render_2.png" />
+    <p>Lighting Adjusted</p>
+    <img style="width: 100%" src="/images/games/project_e/render_3.png" />
+    <p>Post-processing</p>
+    <img style="width: 100%" src="/images/games/project_e/render_4.png" />
+    <p>Outline Pass</p>
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-start">
+    <img style="width: 100%" src="/images/games/project_e/render_5.png" />
+    <p>Glitch (Blit, color adjusted)</p>
+    <img style="width: 100%" src="/images/games/project_e/render_6.png" />
+    <p>Pixelation (Blit)</p>
+    <img style="width: 100%" src="/images/games/project_e/render_7.png" />
+    <p>Distortion & Perlin Noise (Blit)</p>
+    <img style="width: 100%" src="/images/games/project_e/render_8.png" />
+    <p>CRT Frame (UI)</p>
+  </div>
+</div>
+<img style="width: 100%" src="/images/games/project_e/render_final.png" />
+<p>Final (with UI)</p>
+
+<hr />
+<h3>UI/UX Design</h3>
+<p>
+  The entire game is playable with <r>keyboard only</r>. It's designed this way
+  to fully emulate the retro computer theme. To do so, UI is a completely custom
+  system where it fully utilizes Unity's EventSystem.
+</p>
+
+<div class="row">
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-start">
+    <img style="width: 100%" src="/images/games/project_e/ui.png" />
+  </div>
+  <div class="col-12 col-xl-6 d-flex flex-column justify-content-end">
+    <p>
+      The UI buttons are simply presented as a list of text. Selecting a button
+      adds a ">" to the text which signifies selection. It's clean, slick, and
+      intuitive.
+    </p>
+  </div>
+</div>

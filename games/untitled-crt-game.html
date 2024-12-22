@@ -30,307 +30,32 @@
     <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
     <div class="_header"></div>
     <script>
       PageSetup(true, "#nav-link-project-e", true);
     </script>
 
-    <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div class="_game-info"></div>
-      <div id="game-content">
-        <div id="div-foreword">
-          <blockquote
-            class="twitter-tweet"
-            data-theme="dark"
-            style="margin-bottom: 303px !important"
-          >
-            <p lang="en" dir="ltr">
-              screenshots from this game i will never finish
-              <a
-                href="https://twitter.com/hashtag/indiegames?src=hash&amp;ref_src=twsrc%5Etfw"
-                >#indiegames</a
-              >
-              <a href="https://t.co/QnBgLzuERk">pic.twitter.com/QnBgLzuERk</a>
-            </p>
-            &mdash; evets huu (@master_huhu)
-            <a
-              href="https://twitter.com/master_huhu/status/1751811020698304637?ref_src=twsrc%5Etfw"
-              >January 29, 2024</a
-            >
-          </blockquote>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
+    <main class="container-md d-flex flex-wrap flex-md-nowrap flex-md-fill">
+      <div id="game-left">
+        <div class="_game-info"></div>
+      </div>
+
+      <div id="game-right" class="flex-fill">
+        <div class="_game-nav">
+          <nav id="game-nav-horizontal">
+            <div class="d-flex justify-content-center">
+              <button class="game-pages-nav-button">Gameplay</button>
+              <button class="game-pages-nav-button">Enemy Statemachine</button>
+              <button class="game-pages-nav-button">
+                ChatGPT Intergration
+              </button>
+              <button class="game-pages-nav-button">Rendering & UI</button>
+            </div>
+          </nav>
         </div>
 
-        <hr />
-        <div>
-          <h3>Console: Powered by ChaptGPT</h3>
-          <img src="/images/games/project_e/console.jpg" style="width: 100%" />
-          <p>Made a console powered by ChatGPT.</p>
-          <p>
-            Was able to achieve this by using
-            <a
-              href="https://gamecenter.nyu.edu/faculty/21776-2/"
-              target="_blank"
-              >Eddy's</a
-            >
-            ChatGPT plugin that makes API calls to ChatGPT when provided with a
-            token. Pretty straightforward and kinda brutforce. For more info on
-            Eddy's plugin check out his game
-            <a
-              href="https://helixngc7293.itch.io/yandere-ai-girlfriend-simulator"
-              target="_blank"
-              >Yandere AI Girlfriend</a
-            >.
-          </p>
-          <br />
-          <h4>How it works</h4>
-          <p>
-            Short answer is: its basically black magic.<br />I made a custom
-            scriptable that takes in a bunch of pre-written information to
-            prompt it. These information includes:
-          </p>
-          <li>how should the console behave</li>
-          <li>what languages to use</li>
-          <li>what concepts (slangs / terms made up for the game) there are</li>
-          <li>what <em>can</em> the player know at this stage</li>
-          <br />
-          <p>
-            Concepts are separated into
-            <span style="text-decoration: underline">Databases</span> which are
-            just list of strings with the name of the concept and the prompt
-            itself. The idea is based on the progress of the player, they will
-            unlock more concepts so the console can tell them more stuff.
-          </p>
-          <div class="row">
-            <div class="col-12 col-xl-6">
-              <img
-                style="width: 100%"
-                src="/images/games/project_e/consolesettings.png"
-              />
-              <p>console settings (initial prompt)</p>
-            </div>
-            <div class="col-12 col-xl-6">
-              <img
-                style="width: 100%"
-                src="/images/games/project_e/consoledatabase.png"
-              />
-              <p>prompts database (unlockable lore)</p>
-            </div>
-          </div>
-          <br />
-          <h4>Purpose?</h4>
-          <p>
-            Honestly, I personally believe the best way to utilize language
-            model is video game is for it to
-          </p>
-          <div class="row">
-            <div class="col-2 col-xl-4"></div>
-            <div class="col-8 col-xl-4">
-              <p>
-                <strong
-                  >serve as an addition on top of the core experience</strong
-                >
-                instead of putting it front and center as the core experience
-                itself. (sorry eddy)
-              </p>
-            </div>
-            <div class="col-2 col-xl-4"></div>
-          </div>
-          <p>
-            BUT! I really want someone to prove me wrong though, because playing
-            a AI powered game is sick.
-          </p>
-          <p>
-            At least at the stage of this game's development, the language
-            models are simply too difficult to control from a designer's
-            standpoint. It's impossible to predict how it will behave once its
-            in players' hands. That can become very annoying very quickly.<br />This
-            is also why I opt for the Console to be a sort of assistant that
-            fills in more lore of the game whenever it can, but not to directly
-            affect gameplay.
-          </p>
-
-          <hr />
-          <h3>Time Manipulation Goodness</h3>
-          <p>
-            Got bored, tried to experiment with some cool
-            <a
-              href="https://www.youtube.com/watch?v=NFZrIAw1MzA"
-              target="_blank"
-              >Jojo</a
-            >
-            type shit. Since the theme is centered around watching old VHS on a
-            CRT, pausing makes sense, but what if you can REWIND and FAST
-            FROWARD too?
-          </p>
-          <br />
-          <div class="row">
-            <div class="col-12 col-xl-6">
-              <h4>Rewind</h4>
-              <video width="100%" controls muted style="margin-top: 10px">
-                <source
-                  src="/images/games/project_e/rewind.mp4"
-                  type="video/mp4"
-                  alt="untitled crt game rewind"
-                />
-                Your browser does not support the video tag.
-              </video>
-              <p>Basically taking:</p>
-              <li>player position</li>
-              <li>player camera direction</li>
-              <li>enemy position</li>
-              <li>enemy state</li>
-              <br />
-              <p>
-                each second and storing them in a list. The list is expandable
-                based on how many seconds are <em>allowed</em> to be rewinded.
-                <br />
-                Storing these info per second not per frame is due to
-                performance concerns.
-              </p>
-              <p>
-                There is a cooldown to pervent spamming and also to avoid bugs
-                if player time skips to <em>before</em> the game starts etc.
-              </p>
-            </div>
-            <div class="col-12 col-xl-6">
-              <h4>
-                <span style="text-decoration: line-through">Fast Forward</span>
-                Skip
-              </h4>
-              <p>
-                How the fuck am I gonna make fast forward fun? Fuck it we do
-                time-skip instead.
-              </p>
-              <video width="100%" controls muted style="margin-top: 10px">
-                <source
-                  src="/images/games/project_e/timeskip.mp4"
-                  type="video/mp4"
-                  alt="untitled crt game skip time"
-                />
-                Your browser does not support the video tag.
-              </video>
-              <p>
-                Enemy now has a collider ball attached to its front, but
-                offsetted. When that collider gets detected by player raycast,
-                it triggers a time skip.
-              </p>
-              <p>
-                <em>Basically:</em><br />if (enemy is about to enter player
-                view) {<br />skips time and teleports into player view<br />}
-              </p>
-              <p>
-                Coupled with changing the clock, it creates a nice illusion of
-                the
-                <a
-                  href="https://www.youtube.com/watch?v=DpCPlnUlSaI"
-                  target="_blank"
-                  >King Crimson</a
-                >
-                effect.
-              </p>
-              <p>
-                The player's momentum is perserved and basically dashes forward
-                btw.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <hr />
-        <div>
-          <h3>UI & Retro Feelzz</h3>
-          <p>
-            I forgot to mention the UI is a completely custom system where it
-            works perfectly with only keyboard controls.<br />In fact
-            <strong
-              >the entire game is designed to be playable for keyboard only for
-              that maximum retro feel.</strong
-            >
-          </p>
-          <hr />
-
-          <h3>Wander & interception?</h3>
-          <p>
-            - changed wander destinations from world to area around player<br />
-            <br />
-            intercept state concepting:<br />
-            thinking whether or not I should be using the current enemy overlap
-            sphere as a detection range;<br />
-            OR! sound source, sound level detection range? check wall
-            between?<br /><br />
-            <strong>state transition</strong>: from track - once enemy at 2nd to
-            last mapped tracking waypoint, check if player is within range<br />
-            - if player in intercept range, set destination to player forward +
-            velocity (predicted path)
-          </p>
-
-          <hr />
-          <div class="row">
-            <div class="col-12 col-xxl-6">
-              <video
-                autoplay
-                muted
-                controls
-                loop
-                src="/images/games/project_e/101422.mp4"
-                style="width: 100%"
-              ></video>
-            </div>
-            <div class="col-12 col-xxl-6">
-              <h3>Tracking state updates</h3>
-              <p>
-                worked on track state<br />
-                now once player exits the active detection from enemy, system
-                starts noting down player position based on a set interval<br />
-                worked on patrol state<br />
-                enemy roams randomly and take rests in between<br />
-                during rests enemy should look around to search for player<br />
-              </p>
-            </div>
-          </div>
-
-          <hr />
-          <h3>Statemachine</h3>
-          <p>
-            started making a simple statemachine<br />
-            following this tutorial<br />
-          </p>
-          planned states:<br />
-          <li>
-            IDLE<br />
-            where enemy just sits still
-          </li>
-          <li>
-            CHASE<br />
-
-            where enemy is actively chasing player
-          </li>
-          <li>
-            TRACK<br />
-            an advance state where enemy attempts to find the player based on
-            various info
-          </li>
-          <li>
-            PATROL<br />
-            a state before idle where enemy patrols randomly
-          </li>
-          <li>
-            INTERCEPT<br />
-            an advance state where enemy takes short cut to stop player
-          </li>
-          <br />
-          <p>
-            statemachine completed!<br />
-            implemented navmesh simple chase & idle state transition<br />
-            enemy vision implemented<br />
-          </p>
-        </div>
+        <div id="game-content"></div>
       </div>
     </main>
 
@@ -343,14 +68,21 @@
         "Unity 3D",
         "NYU Game Center<br /><inline style='font-size: smaller'>(Spring 2023)",
         "",
-        "a practice thing i made to practice things.<br /><br />enjoy this outdated devlog.",
+        "Lost in the CRT backrooms with an AI that answers your questions, and a threat that chases you down. Manipulate time to escape.",
         false,
         "#",
         0,
-        "../games/brainrot.html",
+        "../games/thought-experiment-simulator.html",
         "../games/foghorn.html",
         "#f9fb87"
       );
+
+      GamePageTabs([
+        "../games/crt_pages/crt_page_1.html",
+        "../games/crt_pages/crt_page_2.html",
+        "../games/crt_pages/crt_page_3.html",
+        "../games/crt_pages/crt_page_4.html",
+      ]);
     </script>
   </body>
 </html>

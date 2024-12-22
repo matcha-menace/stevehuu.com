@@ -30,53 +30,57 @@
     <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
     <div class="_header"></div>
     <script>
       PageSetup(true, "#nav-link-ritual-night", true);
     </script>
 
-    <main class="container-md d-flex flex-wrap flex-md-nowrap">
-      <div class="_game-info"></div>
-      <div id="game-content">
-        <div class="row d-none">
-          <div class="col-12">
-            <div
-              class="row"
-              style="
-                background-color: #121111;
-                border-radius: 12px;
-                margin: -1px;
-              "
-            >
-              <div class="col-6 col-sm-4">
-                <a href="https://discord.gg/pdGkdJEkHR" target="_blank">
+    <main class="container-md d-flex flex-wrap flex-md-nowrap flex-md-fill">
+      <div id="game-left">
+        <div class="_game-info"></div>
+      </div>
+      <div id="game-right">
+        <div id="game-content">
+          <div class="row d-none">
+            <div class="col-12">
+              <div
+                class="row"
+                style="
+                  background-color: #121111;
+                  border-radius: 12px;
+                  margin: -1px;
+                "
+              >
+                <div class="col-6 col-sm-4">
+                  <a href="https://discord.gg/pdGkdJEkHR" target="_blank">
+                    <img
+                      src="/images/games/ritual_night/discord.png"
+                      style="width: 100%"
+                  /></a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a
+                    href="https://www.gamesweekberlin.com/dev-booster/"
+                    target="_blank"
+                  >
+                    <img
+                      src="/images/games/ritual_night/devbooster.png"
+                      style="width: 100%"
+                  /></a>
+                </div>
+                <div class="col-6 col-sm-4">
                   <img
-                    src="/images/games/ritual_night/discord.png"
+                    src="/images/games/ritual_night/GDoC_White.png"
                     style="width: 100%"
-                /></a>
-              </div>
-              <div class="col-6 col-sm-4">
-                <a
-                  href="https://www.gamesweekberlin.com/dev-booster/"
-                  target="_blank"
-                >
+                  />
+                </div>
+                <div class="col-6 col-sm-4">
                   <img
-                    src="/images/games/ritual_night/devbooster.png"
+                    src="/images/games/ritual_night/TinyTeams_OfficialSelection.png"
                     style="width: 100%"
-                /></a>
-              </div>
-              <div class="col-6 col-sm-4">
-                <img
-                  src="/images/games/ritual_night/GDoC_White.png"
-                  style="width: 100%"
-                />
-              </div>
-              <div class="col-6 col-sm-4">
-                <img
-                  src="/images/games/ritual_night/TinyTeams_OfficialSelection.png"
-                  style="width: 100%"
-                />
+                  />
+                </div>
               </div>
             </div>
           </div>
