@@ -40,8 +40,110 @@
       <div id="game-left">
         <div class="_game-info"></div>
       </div>
-      <div id="game-right">
-        <div id="game-content"></div>
+      <div id="game-right" class="flex-fill">
+        <div id="game-content">
+          <video
+            autoplay
+            muted
+            controls
+            loop
+            src="/videos/tes_trailer.mp4"
+            style="width: 100%"
+          ></video>
+          <iframe
+            src="https://store.steampowered.com/widget/2696320/"
+            frameborder="0"
+            width="646"
+            height="190"
+            style="height: 210px !important"
+          ></iframe>
+          <hr />
+          <h3>
+            Voice
+            <small style="font-size: small">"<s>Acting</s>"</small> Sound
+            Effects
+          </h3>
+          <p>
+            I created all of the sound effects in Hoho Game's debut game:
+            Thought Experiment Simulator.
+          </p>
+          <p>
+            The pillar behind TES' sound design is cartoony fun. Inspired by
+            <a
+              href="https://www.bilibili.com/video/BV1KK21Y8EAh/?spm_id_from=333.1387.homepage.video_card.click&vd_source=d0c27e7565c455a61ba5c70973d4fd28"
+              target="_blank"
+              >this</a
+            >
+            amazing series by a Chinese animation studio as reference. I made
+            all the sound effects in the game with <r>just my voice</r>.
+          </p>
+          <img style="width: 100%" src="/images/games/tes/sounds.png" />
+          <p>
+            In total, there were <r>more than 300</r> individual clips of sound
+            effects all <r>recorded, edited, packed, and implemented</r> by me.
+            Many of which had undergone a few iterations as a result of
+            playtesting and direct feedback from the creator himself.
+          </p>
+          <p>
+            Here is a select few of the most unhinged ones without context for
+            your auditory pleasure.
+          </p>
+          <div class="d-flex flex-wrap">
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Grandfather_Carpet_Trip.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Prisoners_Nuke_Explode.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Prsioners_Stock_Lost.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Sisyphus_RollDown_3.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Trolley_TimeTravel.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Trolley_TurnFrog_Long_2.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source src="/images/games/tes/UFO_ENTER.wav" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls class="invert-colors">
+              <source
+                src="/images/games/tes/Sorites_YesHeap.wav"
+                type="audio/wav"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -50,7 +152,7 @@
     <script>
       GameInfoSetup(
         "Thought Experiment Simulator",
-        "2024",
+        "2023 - 2024",
         "Unity 2D",
         "Hoho Games",
         "Contractor",
@@ -60,7 +162,7 @@
         0,
         "../games/ritual-night.html",
         "../games/untitled-crt-game.html",
-        "#efefef"
+        "var(--color-w)"
       );
     </script>
   </body>

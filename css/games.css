@@ -237,6 +237,10 @@ video {
 #game-content gray {
   color: var(--color-g);
 }
+#game-content audio {
+  padding: 4px;
+}
+
 .indent {
   padding-left: 5%;
 }
@@ -258,9 +262,6 @@ video {
   padding-top: 20px;
   border-bottom: 1px solid var(--color-w);
   background-color: var(--color-b);
-}
-#game-nav-horizontal div {
-  /* border: 1px solid var(--color-w); */
 }
 .game-pages-nav-button {
   color: var(--color-y);
@@ -346,4 +347,17 @@ iframe {
   width: 100%;
   height: auto;
   padding: 10px;
+}
+
+#rn-games-week-berlin-link {
+  transition: filter 0.2s ease-out;
+}
+#rn-games-week-berlin-link:hover {
+  filter: drop-shadow(0 4px 6px var(--color-y));
+}
+#rn-discord-link {
+  transition: transform 0.2s ease-out;
+}
+#rn-discord-link:hover {
+  transform: scale(90%) rotate(0.005turn);
 }

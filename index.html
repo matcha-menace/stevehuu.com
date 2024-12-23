@@ -93,6 +93,7 @@
           <!-- social bar -->
           <div class="social-bar col d-flex justify-content-start"></div>
 
+          <!-- about button -->
           <p style="height: 5px">
             <span
               id="learn-more"
@@ -447,6 +448,88 @@
               </div>
             </div>
           </div>
+
+          <!-- extra button -->
+          <p
+            class="d-none d-md-block"
+            style="text-align: center; color: var(--color-g)"
+          >
+            Well, you've gotten this far... How about
+            <span
+              id="extra-more"
+              class="index-expansion-buttons"
+              onclick="$('#index-extra').animate({
+                height: 'toggle'
+              }, 500);
+              $('#extra-more').html('');
+              $('#extra-close').html('hide these.');
+              $('html, body').animate({ scrollTop: $(document).height() }, 500);"
+              style="color: var(--color-g)"
+              >these? <span class="_svg-down"></span
+            ></span>
+            <span
+              id="extra-close"
+              class="index-expansion-buttons"
+              onclick="$('#index-extra').animate({
+                height: 'toggle'
+              }, 500);
+              $('#extra-more').html('these? <span class=`_svg-down`></span>');
+              $('#extra-close').html('')
+              $('html, body').animate({ scrollTop: $(document).height() }, 500);"
+              style="color: var(--color-g)"
+            ></span>
+          </p>
+
+          <!-- Extra -->
+          <div class="d-none d-md-block">
+            <div id="index-extra" style="display: none">
+              <hr class="rounded" />
+              <div
+                class="games-main row row-cols-1 row-cols-md-4 row-cols-xxl-6 g-3 g-lg-4 justify-content-center"
+              >
+                <div class="p-2 game-tab">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <img src="/images/index/hypertoon.png" />
+                      <h2>HyperToon</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="p-2 game-tab">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <img src="/images/index/venus.png" />
+                      <h2>Venera</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="p-2 game-tab">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <img src="/images/photos/santamonica.jpg" />
+                      <h2>Photography</h2>
+                    </div>
+                  </a>
+                </div>
+                <div class="p-2 game-tab">
+                  <a href="#" onclick="return false">
+                    <div>
+                      <video width="100%" autoplay muted loop>
+                        <source
+                          src="/images/about/youngling_steve.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                      <h2>Archives</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-prop"></div>
         </div>
 
         <div class="d-none d-xxl-block col-1"></div>

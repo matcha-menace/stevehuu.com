@@ -40,51 +40,21 @@
       <div id="game-left">
         <div class="_game-info"></div>
       </div>
-      <div id="game-right">
-        <div id="game-content">
-          <div class="row d-none">
-            <div class="col-12">
-              <div
-                class="row"
-                style="
-                  background-color: #121111;
-                  border-radius: 12px;
-                  margin: -1px;
-                "
-              >
-                <div class="col-6 col-sm-4">
-                  <a href="https://discord.gg/pdGkdJEkHR" target="_blank">
-                    <img
-                      src="/images/games/ritual_night/discord.png"
-                      style="width: 100%"
-                  /></a>
-                </div>
-                <div class="col-6 col-sm-4">
-                  <a
-                    href="https://www.gamesweekberlin.com/dev-booster/"
-                    target="_blank"
-                  >
-                    <img
-                      src="/images/games/ritual_night/devbooster.png"
-                      style="width: 100%"
-                  /></a>
-                </div>
-                <div class="col-6 col-sm-4">
-                  <img
-                    src="/images/games/ritual_night/GDoC_White.png"
-                    style="width: 100%"
-                  />
-                </div>
-                <div class="col-6 col-sm-4">
-                  <img
-                    src="/images/games/ritual_night/TinyTeams_OfficialSelection.png"
-                    style="width: 100%"
-                  />
-                </div>
-              </div>
+      <div id="game-right" class="flex-fill">
+        <div class="_game-nav">
+          <nav id="game-nav-horizontal">
+            <div class="d-flex flex-wrap justify-content-start">
+              <button class="game-pages-nav-button">Overview</button>
+              <button class="game-pages-nav-button">Design</button>
+              <button class="game-pages-nav-button">Development</button>
+              <button class="game-pages-nav-button">Narrative</button>
+              <button class="game-pages-nav-button">Audio</button>
+              <button class="game-pages-nav-button">Production</button>
             </div>
-          </div>
+          </nav>
         </div>
+
+        <div id="game-content"></div>
       </div>
     </main>
 
@@ -103,8 +73,17 @@
         0,
         "../games/anamnesis.html",
         "../games/thought-experiment-simulator.html",
-        "#48bf84"
+        "#8dc63f"
       );
+
+      GamePageTabs([
+        "../games/ritual_night_pages/ritual_night_page_1.html",
+        "../games/ritual_night_pages/ritual_night_page_2.html",
+        "../games/ritual_night_pages/ritual_night_page_3.html",
+        "../games/ritual_night_pages/ritual_night_page_4.html",
+        "../games/ritual_night_pages/ritual_night_page_5.html",
+        "../games/ritual_night_pages/ritual_night_page_6.html",
+      ]);
     </script>
   </body>
 </html>

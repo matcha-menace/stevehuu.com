@@ -17,6 +17,11 @@ $(() => {
       $("#index-ad").fadeIn(300);
     }
   };
+  $("._footer").load("/master_htmls/footer.html", function () {
+    $(".back-to-top").load("/master_htmls/back-to-top.html").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 100);
+    });
+  });
 });
 
 function LoadSvgs() {
@@ -63,7 +68,7 @@ function GameInfoSetup(gameTitle, gameTime, gameEngine, gameContext, gameRole, g
     $('.game-play-button-div').removeClass(hasGamePlayButton ? "d-none" : '');
     $('.game-play-link').attr('href', gamePlayButtonLink);
     $('.game-play-icon').addClass(gamePlayButtonIcon == 0 ? '_svg-steam' : '_svg-itch');
-    $('.game-description').attr('style', `text-shadow: 5px 2px 10px ${uniqueColor}`)
+    $('.game-h1').attr('style', `text-shadow: 0px 4px 8px ${uniqueColor}`)
     GamePageSetup(leftLink, rightLink)
     LoadSvgs()
   })
@@ -75,11 +80,6 @@ function GamePageSetup(left, right) {
     $(".pb-right").attr("href", right == "none" ? "#" : right);
     if (left == "none") { $(".pb-left").removeAttr('href').addClass("disabled") };
     if (right == "none") { $(".pb-right").removeAttr('href').addClass("disabled") };
-  });
-  $("._footer").load("/master_htmls/footer.html", function () {
-    $(".back-to-top").load("/master_htmls/back-to-top.html").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 100);
-    });
   });
 };
 

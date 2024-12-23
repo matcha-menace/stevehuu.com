@@ -65,14 +65,20 @@ header {
   height: 80px;
   background-color: var(--color-b);
   border-bottom: 1px solid var(--color-w);
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 #header-icon {
   transform: translate(-50%, 0);
   position: absolute;
   left: 50%;
+  top: 15%;
 }
 .header-prop {
   margin-top: 80px;
+}
+footer p {
+  margin-top: 20px;
 }
 
 h1 {
@@ -204,8 +210,11 @@ button {
   padding: 0;
 }
 .navbar-nav {
-  padding-top: 25px;
-  padding-left: 50px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+.navbar-nav ul {
+  padding-left: 0px;
 }
 .nav-link {
   font-family: "K2D Light Regular";

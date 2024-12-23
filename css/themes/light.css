@@ -19,3 +19,7 @@
   --color-desktop-sm: #e4e1d9;
   --color-desktop-sm-transparent: #e4e1d900;
 }
+
+.invert-colors {
+  filter: invert() !important;
+}
