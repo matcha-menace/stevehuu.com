@@ -17,21 +17,23 @@ $(() => {
       $("#index-ad").fadeIn(300);
     }
   };
-  LoadSvgs()
 });
 
 function LoadSvgs() {
   $("._svg-steam").load("/master_htmls/svg/svg-steam.html");
   $("._svg-itch").load("/master_htmls/svg/svg-itch.html");
   $("._svg-new-window").load("/master_htmls/svg/svg-new-window.html");
+  $("._svg-down").load("/master_htmls/svg/svg-down.html");
 }
 
 function PageSetup(showSocial, currentPageNavLink, isCat) {
   $("._header").load("/master_htmls/header.html", function () {
+    $(".social-bar").load("/master_htmls/social-bar.html")
     $(currentPageNavLink).attr("class", showSocial ? "nav-game current-page" : "nav-link current-page");
     $("#header-social").addClass(showSocial ? "" : "d-md-none");
     $("#header-cat").addClass(isCat ? "" : "d-none");
     $("#header-stuff").addClass(isCat ? "d-none" : "");
+    LoadSvgs();
     // stuff logo animation
     $("#header-stuff").mouseenter(function () {
       $("#header-stuff img").animate({
@@ -83,17 +85,26 @@ function GamePageSetup(left, right) {
 
 function GamePageTabs(htmlList) {
   const gamePostButtons = $(".game-pages-nav-button").toArray();
+  let allPages = '';
+  $.each(htmlList, function (i, pg) {
+    $.get(pg, function (text) {
+      allPages += `<div class='game-page-${i} d-none'>` + text + "</div>"
+      $("#game-content").html(allPages)
+      $(`.game-page-0`).removeClass('d-none')
+    }, 'html')
+  })
 
-  $("#game-content").load(htmlList[0])
+
   $(gamePostButtons[0]).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
 
   $.each(gamePostButtons, function (i, btn) {
     $(btn).click(function () {
       $.each(gamePostButtons, function (i, btn) {
         $(btn).removeClass("active-game-page").removeClass("flex-fill").removeClass("disabled")
+        $(`.game-page-${i}`).addClass('d-none')
       })
-      $("#game-content").load(htmlList[i])
       $(btn).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
+      $(`.game-page-${i}`).removeClass('d-none')
       $("html, body").animate({ scrollTop: 0 }, 100);
     })
   })
