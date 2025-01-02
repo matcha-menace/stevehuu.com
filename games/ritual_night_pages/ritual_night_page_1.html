@@ -19,13 +19,13 @@
   <img
     class="invert-colors d-xl-block"
     src="/images/games/ritual_night/GDoC_White.png"
-    style="height: 8rem"
+    style="height: 8rem; width: auto !important"
   />
   <a
     id="rn-games-week-berlin-link"
     href="https://www.gamesweekberlin.com/dev-booster/"
     target="_blank"
-    style="height: 8rem"
+    style="height: 8rem; width: auto !important"
   >
     <img
       class="invert-colors"
@@ -33,9 +33,100 @@
       style="height: 100%"
   /></a>
   <a href="https://discord.gg/pdGkdJEkHR" target="_blank" id="rn-discord-link">
-    <img src="/images/games/ritual_night/discord.png" style="height: 8rem"
+    <img
+      src="/images/games/ritual_night/discord.png"
+      style="height: 8rem; width: auto !important"
   /></a>
 </div>
+
+<hr />
+<h4>Development skills</h4>
+<p>
+  Here's <gray>almost (i think)</gray> everything I've done for Ritual Night.
+  wink wink ✨recuiters click
+  <span
+    id="skills-open"
+    class="index-expansion-buttons"
+    onclick="$('#skills').animate({
+      height: 'toggle'
+    }, 100);
+    $('#skills-open').html('');
+    $('#skills-close').html('close');
+"
+    style="color: var(--color-y)"
+    >✨✨✨here✨✨✨</span
+  >
+  <span
+    id="skills-close"
+    class="index-expansion-buttons"
+    onclick="$('#skills').animate({
+      height: 'toggle'
+    }, 100);
+    $('#skills-open').html('✨✨✨here✨✨✨');
+    $('#skills-close').html('')
+"
+    style="color: var(--color-y)"
+  ></span>
+</p>
+<div id="skills" style="display: none">
+  <ul>
+    <li>
+      <r>Design</r>
+      <ul>
+        <li>Design documents</li>
+        <li>Hosting design meetings</li>
+        <li>Hosting playtests & feedback sessions</li>
+        <li>Narrative design / Writing</li>
+      </ul>
+    </li>
+    <li>
+      <r>Scripting</r>
+      <ul>
+        <li>Gameplay (C#)</li>
+        <li>Unity Editor Tooling (C#)</li>
+        <li>
+          UI Front- & Backend (JSON, Database, Steam API, Web Request calls
+          etc.)
+        </li>
+      </ul>
+    </li>
+    <li>
+      <r>Production</r>
+      <ul>
+        <li>Sprint planning</li>
+        <li>Team bonding</li>
+        <li>One-on-one feedbacks</li>
+        <li>Designer interviews</li>
+        <li>BD outreach</li>
+        <li>IRL events</li>
+      </ul>
+    </li>
+    <li>
+      <r>Audio</r>
+      <ul>
+        <li>Tools: Reaper, FL Studio, Audition</li>
+        <li>Sound production</li>
+        <li>Music composition / production</li>
+      </ul>
+    </li>
+    <li><r>Unity</r></li>
+    <li>Photoshop</li>
+    <li>Premiere Pro (Trailers, socials)</li>
+    <li>CI/CD</li>
+    <li>Version control tools (git)</li>
+    <li>Figma</li>
+    <li>Spreadsheets</li>
+    <li>
+      <r>Website</r> (Built in Squarespace with custom CSS, HTML elements,
+      JavaScript interactions)
+    </li>
+    <li>
+      Localization (All Simplified Chinese texts, localization tools,
+      spreadsheet automation)
+    </li>
+  </ul>
+</div>
+
 <hr />
 <h3>Overview</h3>
 <p>
@@ -71,6 +162,6 @@
   autoplay
   muted
   loop
-  src="/images/games/ritual_night/team/twerk.mov"
+  src="/images/games/ritual_night/team/twerk.mp4"
   style="width: 100%"
 ></video>

@@ -206,6 +206,14 @@ button {
   margin-top: 80px;
   --bs-offcanvas-width: 350px;
 }
+#offcanvas-top-prop {
+  position: absolute;
+  top: -80px;
+  height: 80px;
+  width: 100vw;
+  background-color: var(--color-b);
+  border-bottom: 1px solid var(--color-w);
+}
 .offcanvas-body {
   padding: 0;
 }
@@ -447,4 +455,34 @@ h2 a:hover {
 }
 html.is-animating .transition-fade {
   opacity: 0;
+}
+
+/* back to top */
+.back-to-top {
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+  border: 1px solid var(--color-w);
+  border-radius: 4px;
+  padding: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 4px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+  color: var(--color-y);
+  background-color: var(--color-b);
+  display: none;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-y);
+  border: 1px solid var(--color-y);
+}
+.back-to-top-a {
+  color: var(--color-y) !important;
+}
+.back-to-top:hover .back-to-top-a {
+  color: var(--color-b) !important;
 }

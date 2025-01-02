@@ -18,6 +18,8 @@
   --color-y-sm: #215c7c;
   --color-desktop-sm: #e4e1d9;
   --color-desktop-sm-transparent: #e4e1d900;
+  /* game spacing */
+  --game-content-spacing: 20px;
 }
 
 .invert-colors {

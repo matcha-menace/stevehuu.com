@@ -1,5 +1,46 @@
+// displaying header
+var isHeaderAnimating = false;
+var isHeaderDisplaying = true;
+function dHeader(time) {
+  isHeaderAnimating = true;
+  $("header").animate({ top: "0" }, time);
+  $("#game-nav-horizontal").animate({ top: "0px" }, time);
+  setTimeout(function () {
+    isHeaderAnimating = false;
+    isHeaderDisplaying = true;
+    $("#game-nav-horizontal").attr("style", "position: default;");
+  }, time);
+}
+function undHeader(time) {
+  isHeaderAnimating = true;
+  $("header").animate({ top: "-80px" }, time);
+
+  if (isHeaderDisplaying) {
+    $("#game-nav-horizontal").attr("style", "position: relative;");
+    $("#game-nav-horizontal").animate({ top: "-80px" }, time);
+  }
+  else {
+    $("#game-nav-horizontal").attr("style", "position: relative; top: -80px;");
+  }
+  setTimeout(function () {
+    isHeaderAnimating = false;
+    isHeaderDisplaying = false;
+  }, time);
+}
+
 $(() => {
+  $("._footer").load("/master_htmls/footer.html", function () {
+    $(".back-to-top").load("/master_htmls/back-to-top.html").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 100);
+    });
+  });
+  // mobile header
+  var prevScrollpos = window.scrollY;
+  var headerDiv = document.querySelector("header");
+  var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight + 200;
   window.onscroll = function () {
+    var onMobile = window.matchMedia("(max-width: 1319px)").matches;
+    // ad
     if (
       document.body.scrollTop > 150 ||
       document.documentElement.scrollTop > 150
@@ -12,15 +53,40 @@ $(() => {
     if (
       (document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100) &&
-      !adViewed
+      !adViewed && !onMobile
     ) {
       $("#index-ad").fadeIn(300);
     }
-  };
-  $("._footer").load("/master_htmls/footer.html", function () {
-    $(".back-to-top").load("/master_htmls/back-to-top.html").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 100);
-    });
+
+    // mobile header
+    if (onMobile) {
+      var currentScrollPos = window.scrollY;
+      if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+        if (!isHeaderAnimating) {
+          dHeader(100)
+        }
+      }
+      else {
+        if (!isHeaderAnimating) {
+          undHeader(250)
+        }
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  }
+
+  // make sure header displays if resized out of mobile mode
+  $(window).on('resize', function () {
+    var onMobile = window.matchMedia("(max-width: 1319px)").matches;
+    if (!onMobile) {
+      if (!isHeaderDisplaying) {
+        dHeader(0)
+      }
+    }
+    else {
+      adViewed = true;
+      $("#index-ad").fadeOut(100);
+    }
   });
 });
 
@@ -106,6 +172,7 @@ function GamePageTabs(htmlList) {
       $(btn).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
       $(`.game-page-${i}`).removeClass('d-none')
       $("html, body").animate({ scrollTop: 0 }, 100);
+      LoadSvgs()
     })
   })
 }
@@ -128,10 +195,6 @@ function LoadGameTabs() {
 // ad
 var adViewed = false;
 function CloseAd() {
-  var onMobile = window.matchMedia("(max-width: 1319px)").matches;
-  // if (onMobile) {
-  //   adViewed = true;
-  // }
   adViewed = true;
   $("#index-ad").fadeOut(100);
 }

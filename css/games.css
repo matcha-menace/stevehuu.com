@@ -23,10 +23,6 @@
   text-overflow: ellipsis;
 }
 
-video {
-  margin-bottom: 10px;
-}
-
 /* hover animations */
 @property --rotate {
   syntax: "<angle>";
@@ -135,7 +131,6 @@ video {
 .game-category-title {
   text-align: end;
 }
-
 .game-tab:hover .behind-splash {
   opacity: 1;
 }
@@ -147,7 +142,6 @@ video {
 /* game sepcific h1 */
 .game-h1 {
   color: var(--color-w);
-  cursor: default;
 }
 
 /* page buttons */
@@ -210,8 +204,10 @@ video {
 #game-info-card h5 {
   font-size: clamp(16px, 18px, 1vmax);
 }
+
+/* GAME CONTENT */
 #game-content {
-  width: 95%;
+  width: 98%;
   margin-top: 20px;
   padding-left: 5px;
   padding-right: 5px;
@@ -219,17 +215,57 @@ video {
 #game-content h3 {
   font-family: "JetBrains Mono";
   font-weight: bolder;
-  margin-bottom: 20px;
+  margin-bottom: var(--game-content-spacing);
 }
 #game-content h4 {
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: var(--game-content-spacing);
+}
+#game-content p {
+  margin-bottom: var(--game-content-spacing);
 }
 #game-content hr {
-  margin-top: 60px;
+  margin-top: calc(var(--game-content-spacing) * 2.5);
 }
 #game-content ul {
-  margin-left: 15px;
+  margin-left: 10px;
+  margin-bottom: var(--game-content-spacing);
+}
+#game-content li ul {
+  margin-top: 10px;
+}
+#game-content li {
+  margin-bottom: calc(var(--game-content-spacing) / 1.5);
+}
+#game-content cap {
+  display: block;
+  width: 100%;
+  font-family: "JetBrains Mono";
+  font-size: smaller;
+  text-align: center;
+  margin-top: calc((var(--game-content-spacing) / 2 * -1));
+  margin-bottom: var(--game-content-spacing);
+}
+#game-content img {
+  margin-bottom: var(--game-content-spacing);
+  margin-top: 0px;
+  max-width: 100%;
+}
+#game-content .d-flex {
+  margin-bottom: var(--game-content-spacing);
+}
+#game-content video {
+  margin-bottom: var(--game-content-spacing);
+}
+#game-content audio {
+  margin-bottom: var(--game-content-spacing);
+}
+#game-content iframe {
+  margin-bottom: var(--game-content-spacing);
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  padding: 10px;
 }
 #game-content r {
   color: var(--color-r);
@@ -298,6 +334,7 @@ video {
   opacity: 1 !important;
   margin-left: 10px !important;
   margin-right: 10px !important;
+  margin-bottom: 20px !important;
   transition: all 0.2s ease-out !important;
 }
 .carousel-indicators button:hover {
@@ -310,43 +347,6 @@ video {
   width: 12px !important;
   height: 12px !important;
   transform: translate(0, -2px);
-}
-
-/* back to top */
-.back-to-top {
-  position: fixed;
-  right: 50px;
-  bottom: 30px;
-  border: 1px solid var(--color-w);
-  border-radius: 4px;
-  padding: 3px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 4px;
-  font-size: 16px;
-  transition: background-color 0.2s;
-  color: var(--color-y);
-  background-color: var(--color-b);
-  display: none;
-  cursor: pointer;
-}
-
-.back-to-top:hover {
-  background-color: var(--color-y);
-  border: 1px solid var(--color-y);
-}
-.back-to-top-a {
-  color: var(--color-y) !important;
-}
-.back-to-top:hover .back-to-top-a {
-  color: var(--color-b) !important;
-}
-
-iframe {
-  aspect-ratio: 16/9;
-  width: 100%;
-  height: auto;
-  padding: 10px;
 }
 
 #rn-games-week-berlin-link {

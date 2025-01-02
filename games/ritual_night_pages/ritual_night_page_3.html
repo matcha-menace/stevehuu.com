@@ -1,1 +1,155 @@
-<p>Coming soon!</p>
+<h3>Frontend</h3>
+<p>
+  I was responsible for creating all of the in-game front-end UI elements. The
+  process: I get cool mock-ups from our graphic designer. I re-create it
+  responsively in Unity UI. I setup all the references and dependencies so that
+  programmers have the right functions to call. I animate them. I localize all
+  the texts. Then I pass it to the programmers.
+</p>
+<p>Here're some cool menus & animations.</p>
+<img
+  style="width: 100%"
+  src="/images/games/ritual_night/development/notification.gif"
+/>
+<cap> Fully spam-proof notification system, with backlog protection </cap>
+<div class="row">
+  <div class="col-12 col-md-4">
+    <video
+      autoplay
+      muted
+      loop
+      src="/images/games/ritual_night/development/prisoners_ui.mp4"
+      style="width: 100%"
+    ></video>
+    <cap> Interactions for selecting & viewing prisoners' dilemma </cap>
+  </div>
+  <div class="col-12 col-md-4">
+    <img
+      style="width: 100%"
+      src="/images/games/ritual_night/development/animations.gif"
+    />
+    <cap> Various UI animations </cap>
+  </div>
+  <div class="col-12 col-md-4">
+    <img
+      style="width: 100%"
+      src="/images/games/ritual_night/development/animations_2.gif"
+    />
+    <cap> Various UI animations </cap>
+  </div>
+</div>
+<div class="indent">
+  <hr />
+  <h4>Other</h4>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <img
+        style="width: 100%"
+        src="/images/games/ritual_night/development/wardrobe_ui.png"
+      />
+      <cap> I quite like the wardrobe UI as well </cap>
+    </div>
+    <div class="col-12 col-md-6">
+      <img
+        style="width: 100%"
+        src="/images/games/ritual_night/development/responsive_ui.gif"
+      />
+      <cap> The entire UI is fully responsive to whatever aspect ratio </cap>
+    </div>
+  </div>
+</div>
+
+<hr />
+<h3>Tooling</h3>
+<p>
+  I also created many helpful tools that helps our designers to speed up the
+  implementation process.
+</p>
+
+<div class="indent">
+  <hr />
+  <h4>UI Building Blocks</h4>
+  <p>
+    I set up rules for our designers to follow, so that the entirety of Ritual
+    Night's UI elements are responsive and built based on these following
+    elements.
+  </p>
+  <img
+    style="width: 100%"
+    src="/images/games/ritual_night/development/ui_building_blocks.png"
+  />
+  <p>
+    I also set up many handy UI tools such as the UIMotionController which is a
+    custom animation controller to play specific UI animation clips, which
+    vastly improves dev time.
+  </p>
+  <img
+    style="position: relative; left: 50%; transform: translate(-50%, 0)"
+    src="/images/games/ritual_night/development/ui_motion_controller.png"
+  />
+  <cap>UIMotionController.cs</cap>
+  <hr />
+  <h4>Cosmetic Tools</h4>
+  <p>
+    I made a tool using Unity's editor library and shader language so that the
+    artists could quickly test, set up, and create cosmetic scriptables visually
+    in the scene.
+  </p>
+  <video
+    autoplay
+    muted
+    loop
+    src="/images/games/ritual_night/development/cosmetic_tools.mp4"
+    style="width: 100%"
+  ></video>
+  <cap> Cosmetic tool in action </cap>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <img
+        style="width: 100%"
+        src="/images/games/ritual_night/development/tool_instruction.png"
+      />
+      <cap> Tool instructions for artists </cap>
+    </div>
+    <div class="col-12 col-md-6">
+      <img
+        style="width: 100%"
+        src="/images/games/ritual_night/development/cosmetictool.png"
+      />
+      <cap> Tool overview </cap>
+    </div>
+  </div>
+
+  <hr />
+  <h4>Audio Tools</h4>
+  <p>
+    A sound tool is created too to expand on how sounds can be played in Unity.
+    This was created by me to mimic functions in audio middlewares like Wwise.
+  </p>
+  <img
+    style="position: relative; left: 50%; transform: translate(-50%, 0)"
+    src="/images/games/ritual_night/audio/audio_tools.png"
+  />
+
+  <hr />
+  <h4>Localization Tools</h4>
+  <p>
+    Using I2 and our command plugin, I created a set of commands to quickly
+    fetch updated localization from a hosted Google Sheet to collaborate with
+    our publisher when QA'ing localization.
+  </p>
+  <p>
+    Here's a link to a
+    <a
+      href="https://bittersweet-room-ada.notion.site/Localization-QA-Guide-512582e5db5d4b08a6df27948f65d0c2"
+      target="_blank"
+      >guide <span class="_svg-new-window"></span
+    ></a>
+    I've written for them.
+  </p>
+  <img
+    style="width: 100%"
+    src="/images/games/ritual_night/development/localization.png"
+  />
+  <cap>Boom spreadsheet jumpscare</cap>
+</div>

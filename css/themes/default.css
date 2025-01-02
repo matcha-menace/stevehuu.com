@@ -18,4 +18,6 @@
   --color-y-sm: #f2c94d;
   --color-desktop-sm: #121111;
   --color-desktop-sm-transparent: #12111100;
+  /* game spacing */
+  --game-content-spacing: 20px;
 }
