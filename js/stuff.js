@@ -805,7 +805,7 @@ $(function () {
         "#games-ritual-content",
         "audio",
         "from-games",
-        "ritual-night"
+        "rn-unused"
       );
     });
     $("#games-anamnesis").dblclick(function () {

@@ -467,7 +467,7 @@ button.light-theme {
   top: 4vh;
 }
 #notes-window .window-content-fixed {
-  background-color: transparent;
+  background-color: var(--color-b-sm);
   padding: 0px;
   height: 40vh;
   width: 15vw;
