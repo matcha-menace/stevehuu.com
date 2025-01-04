@@ -1,2 +1,4 @@
 .htaccess_old
 steve.pem
+on_vimeo/*
+.DS_store
