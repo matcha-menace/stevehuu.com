@@ -9,8 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@deploy
-      - uses: jakejarvis/s3-sync-action@deploy
+      - uses: actions/checkout@master
+      - uses: jakejarvis/s3-sync-action@master
         with:
           args: --follow-symlinks --delete --exclude '.git*/*' --exclude '.git*'
         env:
