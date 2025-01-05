@@ -3,9 +3,9 @@
 
 $(function () {
   // ✨VERSION NUMBER
-  const vNo = "0.9.15";
-  const vDate = "07.03.23";
-  const vMsg = "minor bug fixes<br/>added hyperstars audio folder";
+  const vNo = "0.9.16";
+  const vDate = "01.05.25";
+  const vMsg = "clean up<br />removed titanpoint<br />added archived ritual night tracks";
   $(".sm-version-no").html(vNo);
   $("#sm-loading-date").html(vDate);
 
