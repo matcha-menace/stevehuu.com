@@ -23,6 +23,10 @@
   text-overflow: ellipsis;
 }
 
+.loaded-content {
+  display: none;
+}
+
 /* hover animations */
 @property --rotate {
   syntax: "<angle>";

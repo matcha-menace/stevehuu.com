@@ -340,7 +340,7 @@ button {
 
 /* loader */
 .loader {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   width: 36px;
@@ -351,6 +351,13 @@ button {
   -webkit-animation: spin 1.4s ease-in-out infinite;
   animation: spin 1.4s ease-in-out infinite;
   box-shadow: 0px 0px 0px var(--color-r-sm) inset;
+}
+.loader-text {
+  position: relative;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .loader .loader-sub {
   position: relative;

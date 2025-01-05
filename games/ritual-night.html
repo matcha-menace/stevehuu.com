@@ -30,7 +30,7 @@
     <script type="text/javascript" src="/js/index.js"></script>
   </head>
 
-  <body class="d-flex flex-column">
+  <body class="d-flex flex-column" onload="loading()">
     <div class="_header"></div>
     <script>
       PageSetup(true, "#nav-link-ritual-night", true);
@@ -41,20 +41,28 @@
         <div class="_game-info"></div>
       </div>
       <div id="game-right" class="flex-fill">
-        <div class="_game-nav">
-          <nav id="game-nav-horizontal">
-            <div class="d-flex flex-wrap justify-content-start">
-              <button class="game-pages-nav-button">Overview</button>
-              <button class="game-pages-nav-button">Design</button>
-              <button class="game-pages-nav-button">Development</button>
-              <button class="game-pages-nav-button">Narrative</button>
-              <button class="game-pages-nav-button">Audio</button>
-              <button class="game-pages-nav-button d-none">Production</button>
-            </div>
-          </nav>
+        <div class="loader">
+          <div class="loader-sub"></div>
         </div>
+        <p class="loader-text">
+          Loading...<br />each of Cthulhu's tentacles...
+        </p>
+        <div class="loaded-content">
+          <div class="_game-nav">
+            <nav id="game-nav-horizontal">
+              <div class="d-flex flex-wrap justify-content-start">
+                <button class="game-pages-nav-button">Overview</button>
+                <button class="game-pages-nav-button">Design</button>
+                <button class="game-pages-nav-button">Development</button>
+                <button class="game-pages-nav-button">Narrative</button>
+                <button class="game-pages-nav-button">Audio</button>
+                <button class="game-pages-nav-button d-none">Production</button>
+              </div>
+            </nav>
+          </div>
 
-        <div id="game-content"></div>
+          <div id="game-content"></div>
+        </div>
       </div>
     </main>
 

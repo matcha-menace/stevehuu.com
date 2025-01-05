@@ -28,12 +28,23 @@ function undHeader(time) {
   }, time);
 }
 
+// loader
+function loading() {
+  setTimeout(showPage, 500);
+}
+function showPage() {
+  $(".loader").css("display", "none");
+  $(".loader-text").css("display", "none");
+  $(".loaded-content").css("display", "block");
+}
+
 $(() => {
   $("._footer").load("/master_htmls/footer.html", function () {
     $(".back-to-top").load("/master_htmls/back-to-top.html").click(function () {
       $("html, body").animate({ scrollTop: 0 }, 100);
     });
   });
+
   // mobile header
   var prevScrollpos = window.scrollY;
   var headerDiv = document.querySelector("header");
