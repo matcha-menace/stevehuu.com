@@ -12,16 +12,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@master
 
-      - name: Upload to S3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --follow-symlinks --delete --exclude '.git*/*' --exclude '.git*' --exclude 'images/*' --exclude 'videos/*'
-        env:
-          SOURCE_DIR: ./
-          AWS_REGION: us-east-1
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      # - name: Upload to S3
+      #   uses: jakejarvis/s3-sync-action@master
+      #   with:
+      #     args: --follow-symlinks --delete --exclude '.git*/*' --exclude '.git*' --exclude 'images/*' --exclude 'videos/*'
+      #   env:
+      #     SOURCE_DIR: ./
+      #     AWS_REGION: us-east-1
+      #     AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Configure AWS CLI
         uses: aws-actions/configure-aws-credentials@v3
@@ -29,6 +29,14 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1  # Set your AWS region
+
+      - name: Upload to S3
+        run: |
+          aws s3 sync . s3://your-bucket-name \
+            --exclude "*.mp4" \
+            --exclude "videos/*" \
+            --exclude ".git*" \
+            --delete
     
       - name: Invalidate CloudFront cache
         run: |
