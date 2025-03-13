@@ -267,10 +267,10 @@ button {
 
 /* ad */
 .ad {
-  background-color: #0c4653;
-  border: double mediumspringgreen 5px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  background-color: #000;
+  border: double red 5px;
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
   font-family: georgia;
   padding: 15px;
   max-height: 40vh;
@@ -298,20 +298,88 @@ button {
   fill: #ad2144;
 }
 .ad a#ad-link {
-  color: #d12a54;
+  position: relative;
+  color: white;
   font-size: larger;
-  border: dotted 2px rgb(0, 255, 0);
+  border: double 2px white;
   border-radius: 5px;
   padding: 5px;
   position: relative;
-  top: -20px;
+  text-align: center;
+  /* top: -20px; */
 }
 .ad a#ad-link:hover {
-  background-color: #333e45;
-  border-color: #333e45;
-  color: #fbaf40;
-  text-shadow: 2px 1px 2px var(--color-r);
+  background-color: white;
+  border-color: red;
+  color: red;
+  /* text-shadow: 2px 1px 2px blue; */
+  text-shadow: 0.05em 0 0 red, -0.025em -0.05em 0 #313f97, 0.025em 0.05em 0 blue;
+  color: rgba(0, 194, 203, 0.2);
 }
+.ad a#ad-link:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 4;
+  left: 32%;
+  opacity: 0.8;
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+}
+.ad a#ad-link:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 4;
+  left: 32%;
+  opacity: 0.8;
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 20%, 100% 100%, 0 70%);
+  transform: translate(0.0125em, 0.025em);
+}
+.ad a#ad-link:hover::before {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+}
+.ad a#ad-link:hover::after {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 20%, 100% 100%, 0 70%);
+  transform: translate(0.0125em, 0.025em);
+}
+@keyframes glitch {
+  0% {
+    color: rgba(236, 34, 37, 0.2);
+    text-shadow: 0.05em 0 0 red, -0.025em -0.05em 0 #313f97,
+      0.025em 0.05em 0 green;
+  }
+  14% {
+    text-shadow: 0.05em 0 0 red, -0.025em -0.05em 0 #313f97,
+      0.025em 0.05em 0 green;
+  }
+  15% {
+    color: green;
+    text-shadow: -0.05em -0.025em 0 red, 0.025em -0.025em 0 #313f97,
+      -0.05em -0.05em 0 green;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 red, 0.025em -0.025em 0 #313f97,
+      -0.05em -0.05em 0 green;
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 red, -0.025em 0.05em 0 #313f97,
+      0 -0.05em 0 green;
+  }
+  99% {
+    color: blue;
+    text-shadow: 0.025em 0.05em 0 red, -0.025em 0.05em 0 #313f97,
+      0 -0.05em 0 green;
+  }
+  100% {
+    text-shadow: -0.025em 0 0 red, -0.025em -0.025em 0 #313f97,
+      -0.025em -0.05em 0 green;
+  }
+}
+
 #outfoxtext {
   color: #e9f1f7;
   width: 90%;

@@ -64,7 +64,7 @@ $(() => {
     if (
       (document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100) &&
-      !adViewed && !onMobile
+      !adViewed
     ) {
       $("#index-ad").fadeIn(300);
     }

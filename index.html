@@ -246,33 +246,12 @@
 
             <!-- Working -->
             <br />
-            <h2 class="game-category-title">Past</h2>
+            <h2 class="game-category-title">Other</h2>
             <hr class="rounded" />
             <div
               id="games-working"
               class="games-main row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-3 g-lg-4"
             >
-              <div
-                class="p-2 game-tab"
-                style="opacity: 50%; pointer-events: none"
-              >
-                <a
-                  href="../games/brainrot.html"
-                  title="Coming soon&#8482;"
-                  data-bs-toggle="tooltip"
-                  data-bs-custom-class="unfinished-tooltip"
-                  data-bs-placement="top"
-                  onclick="return false"
-                >
-                  <div>
-                    <img
-                      alt="hyperstars_splash"
-                      src="../images/games/brainrot_splash.webp"
-                    />
-                    <h2>Brainrot*</h2>
-                  </div>
-                </a>
-              </div>
               <!-- <div class="p-2 game-tab">
                 <a
                   href="#"
@@ -529,7 +508,7 @@
         z-index: 9999;
       "
     >
-      <button class="ad-close" onclick="CloseAd()">
+      <!-- <button class="ad-close" onclick="CloseAd()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="22"
@@ -542,14 +521,15 @@
             d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
           />
         </svg>
-      </button>
+      </button> -->
       <script>
         setInterval(() => {
           $("#flash").fadeIn(200);
           $("#flash").fadeOut(200);
         }, 200);
       </script>
-      <h4
+      <!-- AD OLD -->
+      <!-- <h4
         id="flash"
         style="
           background-color: #8dc63f;
@@ -586,7 +566,24 @@
         <inline id="outfoxtext-highlight">no early eliminations</inline>!
         Monsters work together to complete the ritual, while stealthy humans
         secretly sabotage and cause chaos.
-      </p>
+      </p> -->
+
+      <div class="d-flex flex-column">
+        <div>
+          <img
+            alt="brainrot_splash"
+            src="../images/games/brainrot.jpg"
+            width="100%"
+          />
+        </div>
+        <a
+          id="ad-link"
+          data-text="BRAINROT*"
+          href="../games/brainrot.html"
+          style="font-family: 'JetBrains Mono'"
+          >BRAINROT*</a
+        >
+      </div>
     </div>
 
     <script>
