@@ -48,7 +48,7 @@ $(() => {
   // mobile header
   var prevScrollpos = window.scrollY;
   var headerDiv = document.querySelector("header");
-  var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight + 200;
+  // var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight + 200;
   window.onscroll = function () {
     var onMobile = window.matchMedia("(max-width: 1319px)").matches;
     // ad
