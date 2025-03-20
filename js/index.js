@@ -18,8 +18,7 @@ function undHeader(time) {
   if (isHeaderDisplaying) {
     $("#game-nav-horizontal").attr("style", "position: relative;");
     $("#game-nav-horizontal").animate({ top: "-80px" }, time);
-  }
-  else {
+  } else {
     $("#game-nav-horizontal").attr("style", "position: relative; top: -80px;");
   }
   setTimeout(function () {
@@ -40,9 +39,11 @@ function showPage() {
 
 $(() => {
   $("._footer").load("/master_htmls/footer.html", function () {
-    $(".back-to-top").load("/master_htmls/back-to-top.html").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 100);
-    });
+    $(".back-to-top")
+      .load("/master_htmls/back-to-top.html")
+      .click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 100);
+      });
   });
 
   // mobile header
@@ -64,7 +65,8 @@ $(() => {
     if (
       (document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100) &&
-      !adViewed
+      !adViewed &&
+      !onMobile
     ) {
       $("#index-ad").fadeIn(300);
     }
@@ -74,27 +76,25 @@ $(() => {
       var currentScrollPos = window.scrollY;
       if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
         if (!isHeaderAnimating) {
-          dHeader(100)
+          dHeader(100);
         }
-      }
-      else {
+      } else {
         if (!isHeaderAnimating) {
-          undHeader(250)
+          undHeader(250);
         }
       }
       prevScrollpos = currentScrollPos;
     }
-  }
+  };
 
   // make sure header displays if resized out of mobile mode
-  $(window).on('resize', function () {
+  $(window).on("resize", function () {
     var onMobile = window.matchMedia("(max-width: 1319px)").matches;
     if (!onMobile) {
       if (!isHeaderDisplaying) {
-        dHeader(0)
+        dHeader(0);
       }
-    }
-    else {
+    } else {
       adViewed = true;
       $("#index-ad").fadeOut(100);
     }
@@ -110,87 +110,126 @@ function LoadSvgs() {
 
 function PageSetup(showSocial, currentPageNavLink, isCat) {
   $("._header").load("/master_htmls/header.html", function () {
-    $(".social-bar").load("/master_htmls/social-bar.html")
-    $(currentPageNavLink).attr("class", showSocial ? "nav-game current-page" : "nav-link current-page");
+    $(".social-bar").load("/master_htmls/social-bar.html");
+    $(currentPageNavLink).attr(
+      "class",
+      showSocial ? "nav-game current-page" : "nav-link current-page"
+    );
     $("#header-social").addClass(showSocial ? "" : "d-md-none");
     $("#header-cat").addClass(isCat ? "" : "d-none");
     $("#header-stuff").addClass(isCat ? "d-none" : "");
     LoadSvgs();
     // stuff logo animation
-    $("#header-stuff").mouseenter(function () {
-      $("#header-stuff img").animate({
-        width: "+=10",
-        height: "+=10"
-      }, 100,)
-    }).mouseleave(function () {
-      $("#header-stuff img").animate({
-        width: "-=10",
-        height: "-=10"
-      }, 100,)
-    })
+    $("#header-stuff")
+      .mouseenter(function () {
+        $("#header-stuff img").animate(
+          {
+            width: "+=10",
+            height: "+=10",
+          },
+          100
+        );
+      })
+      .mouseleave(function () {
+        $("#header-stuff img").animate(
+          {
+            width: "-=10",
+            height: "-=10",
+          },
+          100
+        );
+      });
   });
-};
+}
 
-function GameInfoSetup(gameTitle, gameTime, gameEngine, gameContext, gameRole, gameDescription,
-  hasGamePlayButton, gamePlayButtonLink, gamePlayButtonIcon, leftLink, rightLink,
+function GameInfoSetup(
+  gameTitle,
+  gameTime,
+  gameEngine,
+  gameContext,
+  gameRole,
+  gameDescription,
+  hasGamePlayButton,
+  gamePlayButtonLink,
+  gamePlayButtonIcon,
+  leftLink,
+  rightLink,
   uniqueColor
 ) {
   $("._game-info").load("/master_htmls/game-info-card.html", function () {
-    $('.game-h1').html(gameTitle);
-    $('.game-time').html(gameTime);
-    $('.game-engine').html(gameEngine);
-    $('.game-context').html(gameContext);
-    $('.game-role').html(gameRole);
-    $('.game-description').html(gameDescription);
-    $('.game-play-button-div').removeClass(hasGamePlayButton ? "d-none" : '');
-    $('.game-play-link').attr('href', gamePlayButtonLink);
-    $('.game-play-icon').addClass(gamePlayButtonIcon == 0 ? '_svg-steam' : '_svg-itch');
-    $('.game-h1').attr('style', `text-shadow: 0px 4px 8px ${uniqueColor}`)
-    GamePageSetup(leftLink, rightLink)
-    LoadSvgs()
-  })
+    $(".game-h1").html(gameTitle);
+    $(".game-time").html(gameTime);
+    $(".game-engine").html(gameEngine);
+    $(".game-context").html(gameContext);
+    $(".game-role").html(gameRole);
+    $(".game-description").html(gameDescription);
+    $(".game-play-button-div").removeClass(hasGamePlayButton ? "d-none" : "");
+    $(".game-play-link").attr("href", gamePlayButtonLink);
+    $(".game-play-icon").addClass(
+      gamePlayButtonIcon == 0 ? "_svg-steam" : "_svg-itch"
+    );
+    $(".game-h1").attr("style", `text-shadow: 0px 4px 8px ${uniqueColor}`);
+    GamePageSetup(leftLink, rightLink);
+    LoadSvgs();
+  });
 }
 
 function GamePageSetup(left, right) {
   $("._page-buttons").load("/master_htmls/page-buttons.html", function () {
     $(".pb-left").attr("href", left == "none" ? "#" : left);
     $(".pb-right").attr("href", right == "none" ? "#" : right);
-    if (left == "none") { $(".pb-left").removeAttr('href').addClass("disabled") };
-    if (right == "none") { $(".pb-right").removeAttr('href').addClass("disabled") };
+    if (left == "none") {
+      $(".pb-left").removeAttr("href").addClass("disabled");
+    }
+    if (right == "none") {
+      $(".pb-right").removeAttr("href").addClass("disabled");
+    }
   });
-};
+}
 
 function GamePageTabs(htmlList) {
   const gamePostButtons = $(".game-pages-nav-button").toArray();
-  let allPages = '';
+  let allPages = "";
   $.each(htmlList, function (i, pg) {
-    $.get(pg, function (text) {
-      allPages += `<div class='game-page-${i} d-none'>` + text + "</div>"
-      $("#game-content").html(allPages)
-      $(`.game-page-0`).removeClass('d-none')
-    }, 'html')
-  })
+    $.get(
+      pg,
+      function (text) {
+        allPages += `<div class='game-page-${i} d-none'>` + text + "</div>";
+        $("#game-content").html(allPages);
+        $(`.game-page-0`).removeClass("d-none");
+      },
+      "html"
+    );
+  });
 
-
-  $(gamePostButtons[0]).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
+  $(gamePostButtons[0])
+    .addClass("active-game-page")
+    .addClass("flex-fill")
+    .addClass("disabled");
 
   $.each(gamePostButtons, function (i, btn) {
     $(btn).click(function () {
       $.each(gamePostButtons, function (i, btn) {
-        $(btn).removeClass("active-game-page").removeClass("flex-fill").removeClass("disabled")
-        $(`.game-page-${i}`).addClass('d-none')
-      })
-      $(btn).addClass("active-game-page").addClass("flex-fill").addClass("disabled")
-      $(`.game-page-${i}`).removeClass('d-none')
+        $(btn)
+          .removeClass("active-game-page")
+          .removeClass("flex-fill")
+          .removeClass("disabled");
+        $(`.game-page-${i}`).addClass("d-none");
+      });
+      $(btn)
+        .addClass("active-game-page")
+        .addClass("flex-fill")
+        .addClass("disabled");
+      $(`.game-page-${i}`).removeClass("d-none");
       $("html, body").animate({ scrollTop: 0 }, 100);
-      LoadSvgs()
-    })
-  })
+      LoadSvgs();
+    });
+  });
 }
 
 function LoadGameTabs() {
   const gameTabs = $(".game-tab").toArray();
-  console.log(gameTabs)
+  console.log(gameTabs);
 
   let time = 0;
   var doLoad = setTimeout(() => {
