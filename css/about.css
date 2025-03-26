@@ -9,3 +9,7 @@
 #about-text {
   margin: 10px;
 }
+
+r {
+  color: var(--color-r);
+}

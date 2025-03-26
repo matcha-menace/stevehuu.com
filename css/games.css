@@ -133,7 +133,7 @@
   transition: opacity 0.2s ease-out;
 }
 .game-category-title {
-  text-align: end;
+  text-align: center;
 }
 .game-tab:hover .behind-splash {
   opacity: 1;
