@@ -282,20 +282,20 @@ button {
   position: absolute;
   padding: 0px;
   background-color: #0c4653;
-  border: double mediumspringgreen 5px;
-  color: #d12a54;
+  border: double red 5px;
+  color: white;
   margin-right: 20px;
   margin-left: 20px;
   border-radius: 3px;
-  left: -25px;
-  top: -6px;
+  right: -25px;
+  top: -5px;
   z-index: 99999;
 }
 .ad-close svg {
   transition: fill 0.1s;
 }
 .ad-close:hover svg {
-  fill: #ad2144;
+  fill: red;
 }
 .ad a#ad-link {
   position: relative;
@@ -380,14 +380,6 @@ button {
   }
 }
 
-#outfoxtext {
-  color: #e9f1f7;
-  width: 90%;
-}
-#outfoxtext:hover > #outfoxtext-highlight {
-  transition: color 1s ease-out;
-  color: var(--color-r);
-}
 /* scroll bar */
 .ad::-webkit-scrollbar {
   width: 8px;
@@ -560,4 +552,19 @@ html.is-animating .transition-fade {
 }
 .back-to-top:hover .back-to-top-a {
   color: var(--color-b) !important;
+}
+
+/* For youtube videos */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-bottom: 10px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

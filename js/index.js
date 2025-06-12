@@ -52,7 +52,7 @@ $(() => {
   // var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight + 200;
   window.onscroll = function () {
     var onMobile = window.matchMedia("(max-width: 1319px)").matches;
-    // ad
+    // back to top
     if (
       document.body.scrollTop > 150 ||
       document.documentElement.scrollTop > 150
@@ -68,6 +68,8 @@ $(() => {
       !adViewed &&
       !onMobile
     ) {
+      $("#index-ad").fadeOut(300);
+    } else if (!adViewed) {
       $("#index-ad").fadeIn(300);
     }
 
