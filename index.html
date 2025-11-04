@@ -117,18 +117,11 @@
               </div>
               <div id="about-text">
                 <p>
-                  I'm a <r>technical</r> & <r>narrative designer</r>. I make
-                  <r>indie games</r> too.<br />
-                  I like the moon a lot.<br />
-                  Made
-                  <a target="_blank" href="https://www.outfoxgames.com/"
-                    >Outfox Games </a
-                  ><span class="_svg-new-window"></span> at
-                  <a
-                    target="_blank"
-                    href="https://gamecenter.nyu.edu/congrats-to-ritual-night-for-launching-on-steam-early-access/"
-                    >NYU </a
-                  ><span class="_svg-new-window"></span>.<br />
+                  moon guy / black cat<br />
+                  <r>game designer</r> (technical & narrative);
+                  <r>indie dev</r>.<br />
+                  Writing
+                  <span style="color: var(--color-g)">[REDACTED]</span>.<br />
                   Making
                   <a
                     target="_blank"
@@ -139,9 +132,17 @@
                   <a target="_blank" href="https://www.alterstaff.io/"
                     >AlterStaff </a
                   ><span class="_svg-new-window"></span>.<br />
-                  Writing
-                  <span style="color: var(--color-g)">[REDACTED]</span>. For
-                  writing vault click <a href="/writing.html">here</a>.<br />
+                  Made
+                  <a target="_blank" href="https://www.outfoxgames.com/"
+                    >Outfox Games </a
+                  ><span class="_svg-new-window"></span> at
+                  <a
+                    target="_blank"
+                    href="https://gamecenter.nyu.edu/congrats-to-ritual-night-for-launching-on-steam-early-access/"
+                    >NYU </a
+                  ><span class="_svg-new-window"></span>.<br />
+                  For writing vault click
+                  <a href="/writing.html">here</a>.<br />
                   <br />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -164,9 +165,9 @@
                   <br />
                   &#60;<a
                     target="_blank"
-                    href="https://www.stevehuu.com/documents/resume-2025-v3.pdf"
+                    href="https://www.stevehuu.com/documents/resume-2025-v4.pdf"
                     >resume</a
-                  >&#62; (2025v3)
+                  >&#62; (2025v4)
                 </p>
               </div>
             </div>
@@ -174,22 +175,6 @@
 
           <!-- Game -->
           <div id="index-game">
-            <div class="index-game-section">
-              <div id="first-game-box">
-                <div class="p-2">
-                  <script>
-                    setInterval(() => {
-                      $("#blink").fadeIn(500);
-                      $("#blink").fadeOut(500);
-                    }, 500);
-                  </script>
-                  <h1 style="color: var(--color-w)">
-                    > <inline id="blink">|</inline>
-                  </h1>
-                </div>
-              </div>
-            </div>
-
             <!-- Shipped -->
             <!-- <h2 class="game-category-title">Shipped</h2>
             <hr class="rounded" />
@@ -278,7 +263,7 @@
               <div class="p-2 game-tab" style="opacity: 0.2">
                 <a
                   href="../games/brainrot.html"
-                  title="brainrot"
+                  title="in development"
                   data-bs-toggle="tooltip"
                   data-bs-custom-class="unfinished-tooltip"
                   data-bs-placement="top"
@@ -293,14 +278,15 @@
                   </div>
                 </a>
               </div>
-              <div class="p-2 game-tab">
+              <div class="p-2 game-tab" style="opacity: 0.2">
                 <a
                   href="https://store.steampowered.com/app/2880730/AI2U_With_You_Til_The_End/"
-                  title="senpai"
+                  title="portfolio pending"
                   data-bs-toggle="tooltip"
                   data-bs-custom-class="unfinished-tooltip"
                   data-bs-placement="top"
                   target="_blank"
+                  onclick="return false"
                 >
                   <div>
                     <img
@@ -360,8 +346,41 @@
               </div>
               <div class="p-2 game-tab">
                 <a
+                  href="../games/thought-experiment-simulator.html"
+                  title="trolley time"
+                  data-bs-toggle="tooltip"
+                  data-bs-custom-class="unfinished-tooltip"
+                  data-bs-placement="top"
+                >
+                  <div>
+                    <img
+                      alt="thought experiment simulator"
+                      src="../images/games/tes_splash.webp"
+                    />
+                    <video
+                      width="100%"
+                      autoplay
+                      muted
+                      loop
+                      class="behind-splash"
+                    >
+                      <source
+                        src="../videos/tes_trailer.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                    <h2>
+                      Thought Experiment Simulator
+                      <span class="_svg-steam"></span>
+                    </h2>
+                  </div>
+                </a>
+              </div>
+              <div class="p-2 game-tab">
+                <a
                   href="../games/hyperstars.html"
-                  title="yes yes we will work on this again we promised"
+                  title="will ship one day (promise)"
                   data-bs-toggle="tooltip"
                   data-bs-custom-class="unfinished-tooltip"
                   data-bs-placement="top"
@@ -496,12 +515,28 @@
                   </div>
                 </a>
               </div>
+
+              <div class="index-game-section">
+                <div id="first-game-box">
+                  <div class="p-2">
+                    <script>
+                      setInterval(() => {
+                        $("#blink").fadeIn(500);
+                        $("#blink").fadeOut(500);
+                      }, 500);
+                    </script>
+                    <h1 style="color: var(--color-w)">
+                      > <inline id="blink">|</inline>
+                    </h1>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- extra button -->
           <p class="d-none" style="text-align: center; color: var(--color-g)">
-            Well, you've gotten this far... How about
+            Secrets:
             <span
               id="extra-more"
               class="index-expansion-buttons"
@@ -512,7 +547,7 @@
               $('#extra-close').html('hide these.');
               $('html, body').animate({ scrollTop: $(document).height() }, 500);"
               style="color: var(--color-g)"
-              >these? <span class="_svg-down"></span
+              >click <span class="_svg-down"></span
             ></span>
             <span
               id="extra-close"
@@ -520,7 +555,7 @@
               onclick="$('#index-extra').animate({
                 height: 'toggle'
               }, 500);
-              $('#extra-more').html('these? <span class=`_svg-down`></span>');
+              $('#extra-more').html('click <span class=`_svg-down`></span>');
               $('#extra-close').html('')
               $('html, body').animate({ scrollTop: $(document).height() }, 500);"
               style="color: var(--color-g)"
