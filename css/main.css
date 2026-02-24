@@ -2,7 +2,9 @@
   font-family: "K2D Light Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("K2D Light Regular"), url("/fonts/K2D-Light.woff") format("woff");
+  src:
+    local("K2D Light Regular"),
+    url("/fonts/K2D-Light.woff") format("woff");
   font-display: swap;
 }
 
@@ -10,7 +12,8 @@
   font-family: "Space Mono";
   font-style: normal;
   font-weight: normal;
-  src: local("SpaceMono"),
+  src:
+    local("SpaceMono"),
     url("/fonts/SpaceMono-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -19,7 +22,8 @@
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: normal;
-  src: local("JetBrainsMono"),
+  src:
+    local("JetBrainsMono"),
     url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -28,7 +32,9 @@
   font-family: "VCR";
   font-style: normal;
   font-weight: normal;
-  src: local("VCR"), url("/fonts/VCR.ttf") format("truetype");
+  src:
+    local("VCR"),
+    url("/fonts/VCR.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -36,8 +42,19 @@
   font-family: "Disket Mono";
   font-style: normal;
   font-weight: normal;
-  src: local("DisketMono"),
+  src:
+    local("DisketMono"),
     url("/fonts/Disket-Mono-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Franklin Gothic";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Franklin Gothic"),
+    url("/fonts/LibreFranklin-Black.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -46,7 +63,9 @@ html {
 }
 
 * {
-  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+  transition:
+    color 0.2s ease-out,
+    background-color 0.2s ease-out;
 }
 
 body {
@@ -86,7 +105,9 @@ h1 {
   font-size: 50px;
   color: var(--color-y);
   text-shadow: none;
-  transition: text-shadow 0.5s ease-out, color 0.2s ease-out;
+  transition:
+    text-shadow 0.5s ease-out,
+    color 0.2s ease-out;
   cursor: default;
 }
 h2,
@@ -313,7 +334,10 @@ button {
   border-color: red;
   color: red;
   /* text-shadow: 2px 1px 2px blue; */
-  text-shadow: 0.05em 0 0 red, -0.025em -0.05em 0 #313f97, 0.025em 0.05em 0 blue;
+  text-shadow:
+    0.05em 0 0 red,
+    -0.025em -0.05em 0 #313f97,
+    0.025em 0.05em 0 blue;
   color: rgba(0, 194, 203, 0.2);
 }
 .ad a#ad-link:before {
@@ -349,33 +373,47 @@ button {
 @keyframes glitch {
   0% {
     color: rgba(236, 34, 37, 0.2);
-    text-shadow: 0.05em 0 0 red, -0.025em -0.05em 0 #313f97,
+    text-shadow:
+      0.05em 0 0 red,
+      -0.025em -0.05em 0 #313f97,
       0.025em 0.05em 0 green;
   }
   14% {
-    text-shadow: 0.05em 0 0 red, -0.025em -0.05em 0 #313f97,
+    text-shadow:
+      0.05em 0 0 red,
+      -0.025em -0.05em 0 #313f97,
       0.025em 0.05em 0 green;
   }
   15% {
     color: green;
-    text-shadow: -0.05em -0.025em 0 red, 0.025em -0.025em 0 #313f97,
+    text-shadow:
+      -0.05em -0.025em 0 red,
+      0.025em -0.025em 0 #313f97,
       -0.05em -0.05em 0 green;
   }
   49% {
-    text-shadow: -0.05em -0.025em 0 red, 0.025em -0.025em 0 #313f97,
+    text-shadow:
+      -0.05em -0.025em 0 red,
+      0.025em -0.025em 0 #313f97,
       -0.05em -0.05em 0 green;
   }
   50% {
-    text-shadow: 0.025em 0.05em 0 red, -0.025em 0.05em 0 #313f97,
+    text-shadow:
+      0.025em 0.05em 0 red,
+      -0.025em 0.05em 0 #313f97,
       0 -0.05em 0 green;
   }
   99% {
     color: blue;
-    text-shadow: 0.025em 0.05em 0 red, -0.025em 0.05em 0 #313f97,
+    text-shadow:
+      0.025em 0.05em 0 red,
+      -0.025em 0.05em 0 #313f97,
       0 -0.05em 0 green;
   }
   100% {
-    text-shadow: -0.025em 0 0 red, -0.025em -0.025em 0 #313f97,
+    text-shadow:
+      -0.025em 0 0 red,
+      -0.025em -0.025em 0 #313f97,
       -0.025em -0.05em 0 green;
   }
 }
