@@ -1,5 +1,5 @@
 // STUFF MACHINE
-// by stevehuu 2022
+// by evetshuu 2022
 
 $(function () {
   // ✨VERSION NUMBER
@@ -733,7 +733,7 @@ $(function () {
       .find("iframe")
       .attr(
         "src",
-        "https://stevehuu.com/stuff_machine/webgl/u_titanpoint/index.html"
+        "https://evetshuu.com/stuff_machine/webgl/u_titanpoint/index.html"
       );
   });
 
