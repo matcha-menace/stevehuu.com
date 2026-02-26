@@ -57,7 +57,7 @@
         <div class="col-10 col-xxl-10 flex-fill">
           <h1>
             <span id="front-name">
-            Evets Huu</span>
+            evets</span>
             <span id="lightswitch">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,14 +91,39 @@
             </span>
           </h1>
           <script>
-            const h1 = document.getElementById("front-name");
+            const el = document.getElementById("front-name");
 
-            h1.addEventListener("mouseenter", () => {
-              h1.textContent = "Steve Hu";
+            const names = [
+              "evet",
+              "eve",
+              "evetsion",
+              "teve",
+              "steve",
+              "master_huhu",
+              "matcha_menace",
+              "Steve Hu" // final target (last item)
+            ];
+
+            let interval = null;
+
+            el.addEventListener("mouseenter", () => {
+              let i = 0;
+              
+              clearInterval(interval);
+
+              interval = setInterval(() => {
+                el.textContent = names[i];
+                i++;
+
+                if (i >= names.length) {
+                  clearInterval(interval);
+                }
+              }, 90); // speed of scroll (lower = faster)
             });
 
-            h1.addEventListener("mouseleave", () => {
-              h1.textContent = "Evets";
+            el.addEventListener("mouseleave", () => {
+              clearInterval(interval);
+              el.textContent = "evets";
             });
           </script>
           <!-- <h2 style="font-size: 28px">game designer</h2> -->
